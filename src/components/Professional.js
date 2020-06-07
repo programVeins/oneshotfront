@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBody, CardImg, CardText, Button } from 'reactstrap';
+import { Card, CardBody, CardText, Button } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import { professionals } from '../shared/professionals';
 
@@ -13,11 +13,7 @@ const Professional = () => {
                     return (<li key={index}>
                         <div className="row">
                             <div className="col-sm-3">
-                                <Card>
-                                    <CardBody className="py-0 px-0">
-                                        <CardImg src={prof.img} height="250px" width="100px"/>
-                                    </CardBody>
-                                </Card>
+                                <img src={prof.img} alt="professional name" height="250px" width="250px" className="rounded"/>
                             </div>
                             <div className="col-sm-9">
                                 <Card>
@@ -55,11 +51,7 @@ const Professional = () => {
                                 </Card>
                             </div>
                             <div className="col-sm-3">
-                                <Card>
-                                    <CardBody className="py-0 px-0">
-                                        <CardImg src={prof.img} height="250px" width="100px"/>
-                                    </CardBody>
-                                </Card>
+                                <img src={prof.img} alt="professional name" height="250px" width="250px" className="rounded"/>
                             </div>
                         </div>
                         <br/><br/>
