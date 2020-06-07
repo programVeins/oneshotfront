@@ -31,18 +31,20 @@ class Account extends Component {
         console.log("state:" +this.state.email)
     }
       
-    fetchUserDeets() {
+    async fetchUserDeets() {
         const CUE = {
            currentUserEmail: this.props.currentUserEmail
         };
 
-        axios.post(backEndUrl + '/api/accountdeets', {CUE})  
+        await axios.post(backEndUrl + '/api/accountdeets', {CUE})  
         .then(res => {
+
             this.setState({firstname:res.data.firstname});
             this.setState({lastname:res.data.lastname});
             this.setState({email:res.data.email});
             this.setState({contactnum:res.data.contactnum});
             this.setState({torefID:res.data.torefID});
+
         })
         .catch(err => console.log("errmess : " + err.mess))
         
