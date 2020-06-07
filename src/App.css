@@ -169,3 +169,6 @@ u {
 .text-9 {
   font-size: calc(100% + 0.1vh + 0.1vw);
 }
+.text-10 {
+  font-size: calc(80% + 0.1vh + 0.1vw);
+}

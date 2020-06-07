@@ -12,20 +12,20 @@ const Professional = () => {
                 if (prof.id % 2 === 0) {
                     return (<li key={index}>
                         <div className="row">
-                            <div className="col-sm-3">
+                            <div className="col-xl-3">
                                 <img src={prof.img} alt="professional name" height="250px" width="250px" className="rounded"/>
                             </div>
-                            <div className="col-sm-9">
+                            <div className="col-xl-9 mt-5">
                                 <Card>
                                     <CardBody>
-                                        <h4 className="headfont">
+                                        <h4 className="headfont text-6">
                                             {prof.course} - {prof.name}
                                         </h4>
                                         <br/>
-                                        <CardText className="bodyfont text-justify">
+                                        <CardText className="bodyfont text-justify text-10">
                                             {prof.description}
                                         </CardText>
-                                        <NavLink to="/course"><Button color="primary">View Course</Button></NavLink>
+                                        <NavLink to="/course"><Button color="primary" className="text-9">View Course</Button></NavLink>
                                     </CardBody>
                                 </Card>
                             </div>
@@ -35,23 +35,44 @@ const Professional = () => {
                 }
                 else {
                     return (<li key={index}>
-                        <div className="row">
-                            <div className="col-sm-9">
+                        <div className="d-none d-xl-block">
+                            <div className="row">
+                                <div className="col-sm-9">
+                                    <Card>
+                                        <CardBody>
+                                            <h4 className="headfont text-6">
+                                                {prof.course} - {prof.name}
+                                            </h4>
+                                            <br/>
+                                            <CardText className="bodyfont text-justify text-10">
+                                                {prof.description}
+                                            </CardText>
+                                            <NavLink to="/course"><Button color="primary" className="text-9">View Course</Button></NavLink>
+                                        </CardBody>
+                                    </Card>
+                                </div>
+                                <div className="col-sm-3">
+                                    <img src={prof.img} alt="professional name" height="250px" width="250px" className="rounded"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row d-block d-xl-none">
+                            <div className="col">
+                                <img src={prof.img} alt="professional name" height="250px" width="250px" className="rounded"/>
+                            </div>
+                            <div className="col mt-5">
                                 <Card>
                                     <CardBody>
-                                        <h4 className="headfont">
+                                        <h4 className="headfont text-6">
                                             {prof.course} - {prof.name}
                                         </h4>
                                         <br/>
-                                        <CardText className="bodyfont text-justify">
+                                        <CardText className="bodyfont text-justify text-10">
                                             {prof.description}
                                         </CardText>
-                                        <NavLink to="/course"><Button color="primary">View Course</Button></NavLink>
+                                        <NavLink to="/course"><Button color="primary" className="text-9">View Course</Button></NavLink>
                                     </CardBody>
                                 </Card>
-                            </div>
-                            <div className="col-sm-3">
-                                <img src={prof.img} alt="professional name" height="250px" width="250px" className="rounded"/>
                             </div>
                         </div>
                         <br/><br/>
