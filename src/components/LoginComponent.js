@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Button, Form, FormGroup, Label, Input, Jumbotron, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, Jumbotron, Modal, ModalHeader, ModalBody, ModalFooter, Spinner } from 'reactstrap';
 import { NavLink, Redirect } from 'react-router-dom';
 import axios from 'axios';
+import Breaks from './Breaks';
 
 const backEndUrl = "https://oneshotback.herokuapp.com"
 
@@ -14,6 +15,7 @@ class Login extends Component {
     this.state = {
       toggle: false,
       redirect: false,
+      loading: false,
       email: '',
       password: '',
       modalmess : 'Please enter both email and password.'
@@ -43,6 +45,7 @@ class Login extends Component {
       this.toggler();
     }
     else{
+      this.setState({loading: true});
       this.props.updateEmail(this.state.email);
       const userData = {
         email: this.state.email,
@@ -65,6 +68,7 @@ class Login extends Component {
           else if (res.data.auth === 0){
             this.props.loginToggler();
             this.setState({redirect: true});
+            this.setState({loading: false});
           }
       })
       .catch(error => {
@@ -81,7 +85,7 @@ class Login extends Component {
     if (this.state.redirect) {
       return(<Redirect to='/account'/>);
     }
-    else {
+    else if (this.state.loading !== true) {
       return (
       <div>
         <br/><br/>
@@ -131,6 +135,13 @@ class Login extends Component {
         <br/><br/>
       </div>
       );
+    }
+    else {
+      return(<div>
+          <Breaks/>
+          <Spinner color="primary"/>
+          <Breaks/>
+      </div>);
     }
   }
 }

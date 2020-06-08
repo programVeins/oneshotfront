@@ -1,7 +1,9 @@
 import React, { Component} from 'react';
-import { Button, Form, FormGroup, Label, Input, Jumbotron, FormFeedback, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, Jumbotron, FormFeedback,
+  Modal, ModalHeader, ModalBody, ModalFooter, Spinner } from 'reactstrap';
 import { NavLink, Redirect } from 'react-router-dom';
 import axios from 'axios';
+import Breaks from './Breaks';
 
 const backEndUrl = "https://oneshotback.herokuapp.com"
 
@@ -13,6 +15,7 @@ class Signup extends Component {
     this.state = {
       toggle: false,
       redirect: false,
+      loading: false,
       modalmess : 'Please fill in all Required fields.',
       firstname : '',
       lastname : '',
@@ -66,6 +69,7 @@ class Signup extends Component {
       this.toggler();
     }
     else {
+      this.setState({loading: true});
       const userData = {
         firstname: this.state.firstname,
         lastname: this.state.lastname,
@@ -78,7 +82,8 @@ class Signup extends Component {
       axios.post(backEndUrl + `/api/postsignup`, { userData })
         .then(res => {  
             this.setState({torefID:res.data.refID});
-            this.setState({redirect: true})
+            this.setState({redirect: true});
+            this.setState({loading: false});
             console.log(JSON.stringify(this.state));
         })
         .catch(error => {
@@ -133,7 +138,7 @@ class Signup extends Component {
     {
       return <Redirect to="/home"/>;
     }
-    else
+    else if (this.state.loading !== true)
     { 
       const errors = this.validate(this.state.firstname, this.state.lastname,
       this.state.contactnum, this.state.email, this.state.password); 
@@ -244,6 +249,13 @@ class Signup extends Component {
           <br/><br/>
         </div>
       );
+    }
+    else {
+      return(<div>
+          <Breaks/>
+          <Spinner color="primary"/>
+          <Breaks/>
+      </div>);
     }
   }
 }
