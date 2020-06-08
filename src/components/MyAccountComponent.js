@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Jumbotron } from 'reactstrap';
+import { Jumbotron, Spinner } from 'reactstrap';
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 
@@ -16,14 +16,16 @@ class Account extends Component {
             email : '',
             contactnum : '',
             torefID : '',
+            loading: false
         }
 
         this.fetchUserDeets = this.fetchUserDeets.bind(this)
-        this.fetchUserDeets();
+        
     }
     
     componentDidMount() {
-        window.scrollTo(0, 0); 
+        window.scrollTo(0, 0);
+        this.fetchUserDeets(); 
     }
     
     componentDidUpdate() {
@@ -31,6 +33,7 @@ class Account extends Component {
     }
       
     async fetchUserDeets() {
+        this.setState({loading: true});
         const CUE = {
            currentUserEmail: this.props.currentUserEmail
         };
@@ -41,7 +44,8 @@ class Account extends Component {
         await this.setState({lastname:res.data.lastname});
         await this.setState({email:res.data.email});
         await this.setState({contactnum:res.data.contactnum});
-        await this.setState({torefID:res.data.torefID});        
+        await this.setState({torefID:res.data.torefID});
+        await this.setState({loading:false});           
         
     }  
     
@@ -67,54 +71,54 @@ class Account extends Component {
                         <br/>
                         <div className="row">
                             <div className="col-sm-2 text-left">
-                                <h5 className="bodyfont">First Name: </h5>
+                                <h5 className="headfont">First Name: </h5>
                             </div>
                             <div className="col-sm-2 text-left">
-                                <h5 className="bodyfont">{this.state.firstname}</h5>
-                            </div>
-                        </div>
-                        <br/>
-                        <div className="row">
-                            <div className="col-sm-2 text-left">
-                                <h5 className="bodyfont">Last Name: </h5>
-                            </div>
-                            <div className="col-sm-2 text-left">
-                                <h5 className="bodyfont">{this.state.lastname}</h5>
+                                {this.state.loading ? <Spinner color="primary" size="sm"/> :<h5 className="bodyfont">{this.state.firstname}</h5>}
                             </div>
                         </div>
                         <br/>
                         <div className="row">
                             <div className="col-sm-2 text-left">
-                                <h5 className="bodyfont">Email: </h5>
+                                <h5 className="headfont">Last Name: </h5>
                             </div>
                             <div className="col-sm-2 text-left">
-                                <h5 className="bodyfont">{this.state.email}</h5>
-                            </div>
-                        </div>
-                        <br/>
-                        <div className="row">
-                            <div className="col-sm-2 text-left">
-                                <h5 className="bodyfont">Contact number: </h5>
-                            </div>
-                            <div className="col-sm-2 text-left">
-                                <h5 className="bodyfont">{this.state.contactnum}</h5>
+                                {this.state.loading ? <Spinner color="primary" size="sm"/> :<h5 className="bodyfont">{this.state.lastname}</h5>}
                             </div>
                         </div>
                         <br/>
                         <div className="row">
-                            <div className="col-sm-2 text-left">
-                                <h5 className="bodyfont">My referal code: </h5>
+                            <div className="col-sm-2 text-justify">
+                                <h5 className="headfont">Email: </h5>
                             </div>
-                            <div className="col-sm-2 text-left">
-                                <h5 className="bodyfont">{this.state.torefID}</h5>
+                            <div className="col-sm-2 text-justify">
+                                {this.state.loading ? <Spinner color="primary" size="sm"/> :<h5 className="bodyfont">{this.state.email}</h5>}
                             </div>
                         </div>
                         <br/>
                         <div className="row">
-                            <div className="col-sm-2 text-left">
-                                <h5 className="bodyfont">Referals: </h5>
+                            <div className="col-sm-2 text-justify">
+                                <h5 className="headfont">Contact number: </h5>
                             </div>
-                            <div className="col-sm-2 text-left">
+                            <div className="col-sm-2 text-justify">
+                                {this.state.loading ? <Spinner color="primary" size="sm"/> :<h5 className="bodyfont">{this.state.contactnum}</h5>}
+                            </div>
+                        </div>
+                        <br/>
+                        <div className="row">
+                            <div className="col-sm-2 text-justify">
+                                <h5 className="headfont">My referal code: </h5>
+                            </div>
+                            <div className="col-sm-2 text-justify">
+                                {this.state.loading ? <Spinner color="primary" size="sm"/> :<h5 className="bodyfont">{this.state.torefID}</h5>}
+                            </div>
+                        </div>
+                        <br/>
+                        <div className="row">
+                            <div className="col-sm-2 text-justify">
+                                <h5 className="headfont">Referals: </h5>
+                            </div>
+                            <div className="col-sm-2 text-justify">
                                 <h5 className="bodyfont">None</h5>
                             </div>
                         </div>
