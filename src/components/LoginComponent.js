@@ -56,14 +56,17 @@ class Login extends Component {
           if (res.data.auth === 10) {
             this.setState({modalmess: 'You are already logged in'});
             this.toggler();
+            this.setState({loading: false});
           }
           else if (res.data.auth === 1) {
             this.setState({modalmess: 'Email not found. Enter registered email address, or sign up to register'});
             this.toggler();
+            this.setState({loading: false});
           }
           else if (res.data.auth === 2) {
             this.setState({modalmess: 'Incorrect password. Type the correct password'});
             this.toggler();
+            this.setState({loading: false});
           }
           else if (res.data.auth === 0){
             this.props.loginToggler();

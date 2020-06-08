@@ -172,3 +172,16 @@ u {
 .text-10 {
   font-size: calc(80% + 0.1vh + 0.1vw);
 }
+
+.nonebutton {
+  background: none;
+  border: none;
+}
+.nonebutton:hover {
+  background: none;
+  border: none;
+}
+.nonebutton:active {
+  background: none;
+  border: none;
+}
