@@ -43,18 +43,25 @@ const Navi = (props) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
-            <NavItem className="ml-4 mr-5">
-              <NavLink className="nav-link" to="/home"><h5 className="headfont my-auto">Home</h5></NavLink>
+            <NavItem className="ml-4 mr-5" data-toggle="collapse" data-target=".navbar-collapse.show">
+              <NavLink className="nav-link" to="/home" ><h5 className="headfont my-auto">Home</h5></NavLink>
             </NavItem>
-            <NavItem className="ml-4 mr-5">
-              <NavLink className="nav-link" to="/courses"><h5 className="headfont my-auto">Courses</h5></NavLink>
+            <NavItem className="ml-4 mr-5" data-toggle="collapse" data-target=".navbar-collapse.show">
+              <NavLink className="nav-link" to="/courses" ><h5 className="headfont my-auto">Courses</h5></NavLink>
             </NavItem>
-            <NavItem className="ml-4 mr-5">
-              <NavLink className="nav-link" to="/about"><h5 className="headfont my-auto">About Us</h5></NavLink>
+            <NavItem className="ml-4 mr-5" data-toggle="collapse" data-target=".navbar-collapse.show">
+              <NavLink className="nav-link" to="/about" ><h5 className="headfont my-auto">About Us</h5></NavLink>
             </NavItem>
-            <NavItem className="ml-1 mr-5">
-              <NavLink className="nav-link pill" to="/signup"><h5 className="headfont my-auto">Sign Up</h5></NavLink>
-            </NavItem>
+            <div className="d-none d-md-block">
+              <NavItem className="ml-1 mr-5" data-toggle="collapse" data-target=".navbar-collapse.show">
+                <NavLink className="nav-link pill" to="/signup" ><h5 className="headfont my-auto">Sign Up</h5></NavLink>
+              </NavItem>
+            </div>
+            <div className="d-block d-md-none">
+              <NavItem className="ml-4 mr-5" data-toggle="collapse" data-target=".navbar-collapse.show">
+                <NavLink className="nav-link pill" to="/signup" ><h5 className="headfont my-auto">Sign Up</h5></NavLink>
+              </NavItem>
+            </div>
           </Nav>
         </Collapse>
       </Navbar>
@@ -82,9 +89,16 @@ const Navi = (props) => {
             <NavItem className="ml-4 mr-5">
               <NavLink className="nav-link" to="/account"><h5 className="headfont my-auto">My Account</h5></NavLink>
             </NavItem>
-            <NavItem className="ml-1 mr-5">
-              <NavLink className="nav-link pill" to="/home" onClick={handleLogout}><h5 className="headfont my-auto">Log Out</h5></NavLink>
-            </NavItem>
+            <div className="d-none d-md-block">
+              <NavItem className="ml-1 mr-5">
+                <NavLink className="nav-link pill" to="/home" onClick={handleLogout}><h5 className="headfont my-auto">Log Out</h5></NavLink>
+              </NavItem>
+            </div>
+            <div className="d-block d-md-none">
+              <NavItem className="ml-4 mr-5">
+                <NavLink className="nav-link pill" to="/home" onClick={handleLogout}><h5 className="headfont my-auto">Log Out</h5></NavLink>
+              </NavItem>
+            </div>
           </Nav>
         </Collapse>
       </Navbar>
