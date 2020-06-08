@@ -16,8 +16,7 @@ export default class Home extends Component {
             <div>
                 <Jumbotron className="">
                     <br/>
-                    <br/>
-                    <br/>
+                    <div className="d-none d-sm-block"><br/><br/></div>
                     <h1 className="display-4 headfont text-1">Take that One Shot with us to Learn big and Earn big</h1>
                     <p className="lead bodyfont text-5">Easy to use, incredibly effective!</p>
 
@@ -52,8 +51,6 @@ export default class Home extends Component {
                     <br/>
                     <br/>
                     <div className="col"><NavLink to="/courses"><Button color="primary" size="lg" className="bodyfont text-7">⠀⠀⠀Start earning⠀⠀⠀</Button></NavLink></div>
-                    <br/>
-                    <br/>
                 </Jumbotron>
                 <div className="container">
                     <div className="row">
@@ -78,7 +75,7 @@ export default class Home extends Component {
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col mt-5">
+                        <div className="col mt-auto">
                             <h3 className="bodyfont white-text text-6">We provide a variety of courses</h3>
                         </div>
                     </div>
@@ -152,7 +149,8 @@ export default class Home extends Component {
                             </Card>
                         </div>
                     </div>
-                    <br/><br/><br/>
+                    <br/>
+                    <div className="d-none d-sm-block"><br/><br/></div>
                     <NavLink to="/courses"><Button color="info" size="lg" className="bodyfont text-7">⠀⠀⠀Learn More⠀⠀⠀</Button></NavLink>
                     <br/><br/><br/>      
                 </div>
@@ -164,8 +162,7 @@ export default class Home extends Component {
                         </div>
                     </div>
                     <br/>
-                    <br/>
-                    <br/>
+                    <div className="d-none d-sm-block"><br/><br/></div>
                     <div className="row">
                         <div className="col-sm-4 mt-auto">
                             <Media object src="./assets/images/join.png" alt="Join" height="100px" width="100px"></Media>
@@ -181,14 +178,11 @@ export default class Home extends Component {
                         </div>  
                     </div>   
                     <br/>
-                    <br/>
-                    <br/>
+                    <div className="d-none d-sm-block"><br/><br/></div>
                     <NavLink to="/signup"><Button color="primary" size="lg" className="bodyfont text-7">⠀⠀⠀Join Oneshot⠀⠀⠀</Button></NavLink>
                     <br/>
                     <br/>
-                    <br/>
-                    <br/>
-                    <br/>
+                    <div className="d-none d-sm-block"><br/><br/><br/></div>
                 </div>
                 <div className="container">
                     <div className="row">
@@ -198,8 +192,7 @@ export default class Home extends Component {
                         </div>
                     </div>
                     <br/>
-                    <br/>
-                    <br/>
+                    <div className="d-none d-sm-block"><br/><br/></div>
                     <div className="row">
                         <div className="col-sm-4">
                             <Media left href="#">
@@ -214,8 +207,7 @@ export default class Home extends Component {
                         </div>
                     </div>
                     <br/>
-                    <br/>
-                    <br/>
+                    <div className="d-none d-sm-block"><br/><br/></div>
                     <div className="row">
                         <div className="col-sm-4">
                             <Media left href="#">
@@ -230,8 +222,7 @@ export default class Home extends Component {
                         </div>
                     </div>
                     <br/>
-                    <br/>
-                    <br/>
+                    <div className="d-none d-sm-block"><br/><br/></div>
                     <div className="row">
                         <div className="col-sm-4">
                             <Media left href="#">
@@ -246,8 +237,7 @@ export default class Home extends Component {
                         </div>
                     </div>
                     <br/>
-                    <br/>
-                    <br/>
+                    <div className="d-none d-sm-block"><br/><br/></div>
                     <div className="row">
                         <div className="col-sm-4">
                             <Media left href="#">
@@ -262,8 +252,7 @@ export default class Home extends Component {
                         </div>
                     </div>
                     <br/>
-                    <br/>
-                    <br/>
+                    <div className="d-none d-sm-block"><br/><br/></div>
                     <NavLink to="/signup"><Button color="primary" size="lg" className="bodyfont ">⠀⠀⠀Sign Up Now!⠀⠀⠀</Button></NavLink>
                     <br/>
                     <br/>

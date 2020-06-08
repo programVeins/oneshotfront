@@ -175,13 +175,16 @@ u {
 
 .nonebutton {
   background: none;
+  color: rgb(46, 108, 179);
   border: none;
 }
 .nonebutton:hover {
   background: none;
+  color: rgb(46, 108, 179);
   border: none;
 }
 .nonebutton:active {
   background: none;
+  color: rgb(46, 108, 179);
   border: none;
 }
