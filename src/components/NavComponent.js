@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reactstrap';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, Spinner } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import axios from 'axios';
 
 const backEndUrl = "https://oneshotback.herokuapp.com"
 
 const Navi = (props) => {
+  const [isLoading, setIsLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [activeClass, setActiveClass] = useState('navbar-transparent');
   const toggle = () => setIsOpen(!isOpen);
@@ -24,12 +25,14 @@ const Navi = (props) => {
   })
 
   const handleLogout = () => {
+    setIsLoading(true);
     axios.get(backEndUrl + `/api/logout`)
     .then(res => {
       console.log(res.data);
       props.logoutToggler();
       console.log("Logout pressed")
       console.log(props.isLoggedIn)
+      setIsLoading(false);
     })
     .catch(err => console.log("Error caught by handleLogout: " + err.message))
   }
@@ -43,23 +46,23 @@ const Navi = (props) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
-            <NavItem className="ml-4 mr-5" data-toggle="collapse" data-target=".navbar-collapse.show">
-              <NavLink className="nav-link" to="/home" ><h5 className="headfont my-auto">Home</h5></NavLink>
+            <NavItem className="ml-4 mr-5">
+              <NavLink className="nav-link" to="/home" ><h5 className="headfont my-auto text-7">Home</h5></NavLink>
             </NavItem>
-            <NavItem className="ml-4 mr-5" data-toggle="collapse" data-target=".navbar-collapse.show">
-              <NavLink className="nav-link" to="/courses" ><h5 className="headfont my-auto">Courses</h5></NavLink>
+            <NavItem className="ml-4 mr-5">
+              <NavLink className="nav-link" to="/courses" ><h5 className="headfont my-auto text-7">Courses</h5></NavLink>
             </NavItem>
-            <NavItem className="ml-4 mr-5" data-toggle="collapse" data-target=".navbar-collapse.show">
-              <NavLink className="nav-link" to="/about" ><h5 className="headfont my-auto">About Us</h5></NavLink>
+            <NavItem className="ml-4 mr-5">
+              <NavLink className="nav-link" to="/about" ><h5 className="headfont my-auto text-7">About Us</h5></NavLink>
             </NavItem>
             <div className="d-none d-md-block">
-              <NavItem className="ml-1 mr-5" data-toggle="collapse" data-target=".navbar-collapse.show">
-                <NavLink className="nav-link pill" to="/signup" ><h5 className="headfont my-auto">Sign Up</h5></NavLink>
+              <NavItem className="ml-1 mr-5">
+                <NavLink className="nav-link pill" to="/signup" ><h5 className="headfont my-auto text-7">Sign Up</h5></NavLink>
               </NavItem>
             </div>
             <div className="d-block d-md-none">
-              <NavItem className="ml-4 mr-5" data-toggle="collapse" data-target=".navbar-collapse.show">
-                <NavLink className="nav-link pill" to="/signup" ><h5 className="headfont my-auto">Sign Up</h5></NavLink>
+              <NavItem className="ml-4 mr-5">
+                <NavLink className="nav-link pill" to="/signup" ><h5 className="headfont my-auto text-7">Sign Up</h5></NavLink>
               </NavItem>
             </div>
           </Nav>
@@ -78,27 +81,31 @@ const Navi = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem className="ml-4 mr-5">
-              <NavLink className="nav-link" to="/home"><h5 className="headfont my-auto">Home</h5></NavLink>
+              <NavLink className="nav-link" to="/home"><h5 className="headfont my-auto text-7">Home</h5></NavLink>
             </NavItem>
             <NavItem className="ml-4 mr-5">
-              <NavLink className="nav-link" to="/courses"><h5 className="headfont my-auto">Courses</h5></NavLink>
+              <NavLink className="nav-link" to="/courses"><h5 className="headfont my-auto text-7">Courses</h5></NavLink>
             </NavItem>
             <NavItem className="ml-4 mr-5">
-              <NavLink className="nav-link" to="/about"><h5 className="headfont my-auto">About Us</h5></NavLink>
+              <NavLink className="nav-link" to="/about"><h5 className="headfont my-auto text-7">About Us</h5></NavLink>
             </NavItem>
             <NavItem className="ml-4 mr-5">
-              <NavLink className="nav-link" to="/account"><h5 className="headfont my-auto">My Account</h5></NavLink>
+              <NavLink className="nav-link" to="/account"><h5 className="headfont my-auto text-7">My Account</h5></NavLink>
             </NavItem>
-            <div className="d-none d-md-block">
-              <NavItem className="ml-1 mr-5">
-                <NavLink className="nav-link pill" to="/home" onClick={handleLogout}><h5 className="headfont my-auto">Log Out</h5></NavLink>
-              </NavItem>
-            </div>
-            <div className="d-block d-md-none">
-              <NavItem className="ml-4 mr-5">
-                <NavLink className="nav-link pill" to="/home" onClick={handleLogout}><h5 className="headfont my-auto">Log Out</h5></NavLink>
-              </NavItem>
-            </div>
+            { isLoading ? <div className="ml-1 mr-5"><div className="nav-link my-auto"><Spinner color="primary" size="sm"/></div></div> :
+              <div>
+                <div className="d-none d-md-block">
+                  <NavItem className="ml-1 mr-5">
+                    <NavLink className="nav-link pill" to="/home" onClick={handleLogout}><h5 className="headfont my-auto text-7">Log Out</h5></NavLink>
+                  </NavItem>
+                </div>
+                <div className="d-block d-md-none">
+                  <NavItem className="ml-4 mr-5">
+                    <NavLink className="nav-link pill" to="/home" onClick={handleLogout}><h5 className="headfont my-auto text-7">Log Out</h5></NavLink>
+                  </NavItem>
+                </div>
+              </div>
+            }
           </Nav>
         </Collapse>
       </Navbar>

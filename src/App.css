@@ -106,15 +106,15 @@
 }
 
 .pill {
-  color: rgb(57, 131, 216) !important;
+  color: rgb(24, 83, 194) !important;
 }
 
 .pill:hover {
-  color: rgb(46, 108, 179) !important;
+  color: rgb(45, 98, 197) !important;
 }
 
 .pill:active {
-  color: rgb(38, 92, 153) !important;
+  color:rgb(66, 149, 226) !important;
 }
 
 
