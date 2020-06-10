@@ -50,7 +50,7 @@ export default class Home extends Component {
 
                     <br/>
                     <br/>
-                    <div className="col"><NavLink to="/courses"><Button color="primary" size="lg" className="bodyfont text-7">⠀⠀⠀Start earning⠀⠀⠀</Button></NavLink></div>
+                    <div className="col"><NavLink to="/signup"><Button color="primary" size="lg" className="bodyfont text-7">⠀⠀⠀Start earning⠀⠀⠀</Button></NavLink></div>
                 </Jumbotron>
                 <div className="container">
                     <div className="row">
