@@ -15,7 +15,7 @@ class About extends Component {
                         <Jumbotron>
                             <div className="row">
                                 <div className="col">
-                                    <h1 className="headfont ">About Us!</h1>
+                                    <h1 className="headfont text-4">About Us!</h1>
                                 </div>
                             </div>
                             <hr/>

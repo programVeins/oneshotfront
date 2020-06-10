@@ -15,7 +15,7 @@ export default class Courses extends Component {
                     <Jumbotron>
                         <div className="row">
                             <div className="col">
-                                <h1 className="headfont text-2">Courses</h1>
+                                <h1 className="headfont text-4">Courses</h1>
                             </div>
                         </div>
                         <hr/>   

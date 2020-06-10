@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Card, CardBody, CardText, Button, Modal, ModalBody, ModalHeader, ModalFooter } from 'reactstrap';
+import { Card, CardBody, CardText, Button, Modal, ModalBody, ModalHeader, ModalFooter, Spinner } from 'reactstrap';
 import { professionals } from '../shared/professionals';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
@@ -10,10 +10,12 @@ const Professional = (props) => {
     
     const [redirect, setRedirect] = useState(false);
     const [modal, setModal] = useState(false);
+    const [loading, setLoading] = useState(false);
     const [modalmess, setModalmess] = useState('');
     const toggle = () => setModal(!modal);
 
     const handleViewCourse = () => {
+        setLoading(true);
         const CUE = {
             currentUserEmail: props.currentUserEmail
         }; 
@@ -23,16 +25,22 @@ const Professional = (props) => {
             if (res.data.checkpaid === "nouser") {
                 setModalmess("You have not logged in. To access courses, please log in");
                 toggle();
+                setLoading(false);
             }
             else if (res.data.checkpaid === "unpaid") {
                 setModalmess("You have not completed payment. Please pay to access courses");
                 toggle();
+                setLoading(false);
             }
             else if (res.data.checkpaid === "paid") {
                 setRedirect(true);
+                setLoading(false);
             }
         })
-        .catch(err => console.log(err.mess))
+        .catch(err => {
+            console.log(err.mess);
+            setLoading(false);
+        })
         
     }
 
@@ -58,7 +66,7 @@ const Professional = (props) => {
                                               <CardText className="bodyfont text-justify text-10">
                                                   {prof.description}
                                               </CardText>
-                                              <Button onClick={handleViewCourse} color="primary" className="text-9">View Course</Button>
+                                              {loading? <Button color="primary"><Spinner size="sm" color="light"/></Button> : <Button onClick={handleViewCourse} color="primary" className="text-9">View Course</Button>}
                                           </CardBody>
                                       </Card>
                                   </div>
@@ -80,7 +88,7 @@ const Professional = (props) => {
                                                   <CardText className="bodyfont text-justify text-10">
                                                       {prof.description}
                                                   </CardText>
-                                                  <Button onClick={handleViewCourse} color="primary" className="text-9">View Course</Button>
+                                                  {loading? <Button color="primary"><Spinner size="sm" color="light"/></Button> : <Button onClick={handleViewCourse} color="primary" className="text-9">View Course</Button>}
                                               </CardBody>
                                           </Card>
                                       </div>
@@ -103,7 +111,7 @@ const Professional = (props) => {
                                               <CardText className="bodyfont text-justify text-10">
                                                   {prof.description}
                                               </CardText>
-                                              <Button onClick={handleViewCourse} color="primary" className="text-9">View Course</Button>
+                                              {loading? <Button color="primary"><Spinner size="sm" color="light"/></Button> : <Button onClick={handleViewCourse} color="primary" className="text-9">View Course</Button>}
                                           </CardBody>
                                       </Card>
                                   </div>

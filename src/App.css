@@ -72,9 +72,25 @@
 .bluebg {
   background-color: rgb(57, 131, 216) !important;
 }
+.bluebgshade {
+  background-color: rgb(57, 131, 216) !important;
+  box-shadow: 3px 3px 50px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
 
 .blackbg {
   background-color: #1f2225 !important;
+}
+.blackbgshade {
+  background-color: #1f2225 !important;
+  box-shadow: 3px 3px 50px rgba(0, 0, 0, 0.2), -3px -3px 50px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.greybg {
+  background-color: rgb(187, 215, 238) !important;
+  box-shadow: -3px -3px 50px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 5px 5px 0px; 
 }
 
 .nav-link {

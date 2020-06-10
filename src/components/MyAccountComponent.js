@@ -66,7 +66,7 @@ class Account extends Component {
                             </div>
                             <hr/>
                         </Jumbotron>
-                        {this.state.hasPaid === 1 ? <></> :
+                        {this.state.hasPaid === 1 || this.state.loading === true ? <></> :
                             <div>
                                 <Alert color="primary">
                                 You have not completed payment. Click <NavLink to="/payment">here</NavLink> to complete payment.
@@ -75,61 +75,79 @@ class Account extends Component {
                             </div>    
                         }
                         <div className="row mt-auto">
-                            <div className="col-sm-3 text-left">
+                            <div className="col-md-3 text-left">
                                 <h3 className="headfont">My Details:</h3>
                             </div>
                         </div>
                         <br/>
                         <div className="row">
-                            <div className="col-sm-2 text-left">
+                            <div className="col d-none d-sm-block">
                                 <h5 className="headfont">First Name: </h5>
                             </div>
-                            <div className="col-sm-2 text-left">
+                            <div className="col text-left d-block d-sm-none">
+                                <h5 className="headfont">First Name: </h5>
+                            </div>
+                            <div className="col text-left">
                                 {this.state.loading ? <Spinner color="primary" size="sm"/> :<h5 className="bodyfont">{this.state.firstname}</h5>}
                             </div>
                         </div>
                         <br/>
                         <div className="row">
-                            <div className="col-sm-2 text-left">
+                            <div className="col d-none d-sm-block">
                                 <h5 className="headfont">Last Name: </h5>
                             </div>
-                            <div className="col-sm-2 text-left">
+                            <div className="col text-left d-block d-sm-none">
+                                <h5 className="headfont">Last Name: </h5>
+                            </div>
+                            <div className="col text-left">
                                 {this.state.loading ? <Spinner color="primary" size="sm"/> :<h5 className="bodyfont">{this.state.lastname}</h5>}
                             </div>
                         </div>
                         <br/>
                         <div className="row">
-                            <div className="col-sm-2 text-justify">
+                            <div className="col d-none d-sm-block">
                                 <h5 className="headfont">Email: </h5>
                             </div>
-                            <div className="col-sm-2 text-justify">
+                            <div className="col text-left d-block d-sm-none">
+                                <h5 className="headfont">Email: </h5>
+                            </div>
+                            <div className="col text-left">
                                 {this.state.loading ? <Spinner color="primary" size="sm"/> :<h5 className="bodyfont">{this.state.email}</h5>}
                             </div>
                         </div>
                         <br/>
                         <div className="row">
-                            <div className="col-sm-2 text-justify">
+                            <div className="col d-none d-sm-block">
                                 <h5 className="headfont">Contact number: </h5>
                             </div>
-                            <div className="col-sm-2 text-justify">
+                            <div className="col text-left d-block d-sm-none">
+                                <h5 className="headfont">Contact number: </h5>
+                            </div>
+                            <div className="col text-left">
                                 {this.state.loading ? <Spinner color="primary" size="sm"/> :<h5 className="bodyfont">{this.state.contactnum}</h5>}
                             </div>
                         </div>
                         <br/>
                         <div className="row">
-                            <div className="col-sm-2 text-justify">
+                            <div className="col d-none d-sm-block">
                                 <h5 className="headfont">My referal code: </h5>
                             </div>
-                            <div className="col-sm-2 text-justify">
+                            <div className="col text-left d-block d-sm-none">
+                                <h5 className="headfont">My referal code: </h5>
+                            </div>
+                            <div className="col text-left">
                                 {this.state.loading ? <Spinner color="primary" size="sm"/> :<h5 className="bodyfont">{this.state.torefID}</h5>}
                             </div>
                         </div>
                         <br/>
                         <div className="row">
-                            <div className="col-sm-2 text-justify">
+                            <div className="col d-none d-sm-block">
                                 <h5 className="headfont">Referals: </h5>
                             </div>
-                            <div className="col-sm-2 text-justify">
+                            <div className="col text-left d-block d-sm-none">
+                                <h5 className="headfont">Referals: </h5>
+                            </div>
+                            <div className="col text-left">
                                 <h5 className="bodyfont">None</h5>
                             </div>
                         </div>

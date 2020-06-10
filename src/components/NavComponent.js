@@ -25,6 +25,7 @@ const Navi = (props) => {
   })
 
   const handleLogout = () => {
+    toggle()
     setIsLoading(true);
     axios.get(backEndUrl + '/api/logout')
     .then(res => {
@@ -47,22 +48,22 @@ const Navi = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem className="ml-4 mr-5">
-              <NavLink className="nav-link" to="/home" ><h5 className="headfont my-auto text-7">Home</h5></NavLink>
+              <NavLink onClick={toggle} className="nav-link" to="/home" ><h5 className="headfont my-auto text-7">Home</h5></NavLink>
             </NavItem>
             <NavItem className="ml-4 mr-5">
-              <NavLink className="nav-link" to="/courses" ><h5 className="headfont my-auto text-7">Courses</h5></NavLink>
+              <NavLink onClick={toggle} className="nav-link" to="/courses" ><h5 className="headfont my-auto text-7">Courses</h5></NavLink>
             </NavItem>
             <NavItem className="ml-4 mr-5">
-              <NavLink className="nav-link" to="/about" ><h5 className="headfont my-auto text-7">About Us</h5></NavLink>
+              <NavLink onClick={toggle} className="nav-link" to="/about" ><h5 className="headfont my-auto text-7">About Us</h5></NavLink>
             </NavItem>
             <div className="d-none d-md-block">
               <NavItem className="ml-1 mr-5">
-                <NavLink className="nav-link pill" to="/signup" ><h5 className="headfont my-auto text-7">Sign Up</h5></NavLink>
+                <NavLink onClick={toggle} className="nav-link pill" to="/signup" ><h5 className="headfont my-auto text-7">Sign Up</h5></NavLink>
               </NavItem>
             </div>
             <div className="d-block d-md-none">
               <NavItem className="ml-4 mr-5">
-                <NavLink className="nav-link pill" to="/signup" ><h5 className="headfont my-auto text-7">Sign Up</h5></NavLink>
+                <NavLink onClick={toggle} className="nav-link pill" to="/signup" ><h5 className="headfont my-auto text-7">Sign Up</h5></NavLink>
               </NavItem>
             </div>
           </Nav>
@@ -81,16 +82,16 @@ const Navi = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem className="ml-4 mr-5">
-              <NavLink className="nav-link" to="/home"><h5 className="headfont my-auto text-7">Home</h5></NavLink>
+              <NavLink onClick={toggle} className="nav-link" to="/home"><h5 className="headfont my-auto text-7">Home</h5></NavLink>
             </NavItem>
             <NavItem className="ml-4 mr-5">
-              <NavLink className="nav-link" to="/courses"><h5 className="headfont my-auto text-7">Courses</h5></NavLink>
+              <NavLink onClick={toggle} className="nav-link" to="/courses"><h5 className="headfont my-auto text-7">Courses</h5></NavLink>
             </NavItem>
             <NavItem className="ml-4 mr-5">
-              <NavLink className="nav-link" to="/about"><h5 className="headfont my-auto text-7">About Us</h5></NavLink>
+              <NavLink onClick={toggle} className="nav-link" to="/about"><h5 className="headfont my-auto text-7">About Us</h5></NavLink>
             </NavItem>
             <NavItem className="ml-4 mr-5">
-              <NavLink className="nav-link" to="/account"><h5 className="headfont my-auto text-7">My Account</h5></NavLink>
+              <NavLink onClick={toggle} className="nav-link" to="/account"><h5 className="headfont my-auto text-7">My Account</h5></NavLink>
             </NavItem>
             { isLoading ? <div className="ml-1 mr-5"><div className="nav-link my-auto"><Spinner color="primary" size="sm"/></div></div> :
               <div>
