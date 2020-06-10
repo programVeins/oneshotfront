@@ -51,7 +51,7 @@ class Login extends Component {
         email: this.state.email,
         password: this.state.password
       }
-      axios.post(backEndUrl + `/api/postlogin`, { userData })
+      axios.post(backEndUrl + '/api/postlogin', { userData })
       .then(res => {  
           if (res.data.auth === 10) {
             this.setState({modalmess: 'You are already logged in'});
@@ -75,8 +75,10 @@ class Login extends Component {
           }
       })
       .catch(error => {
+        this.setState({modalmess: 'Server Error. Please try again later'});
+        this.toggler();
+        this.setState({loading: false});
         console.log('Post userData ', error.message);
-        alert('Your userData could not be posted.\nError: ' + error.message);
         console.log("End of catch")
       });
     }

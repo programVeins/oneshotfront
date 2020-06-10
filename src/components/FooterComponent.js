@@ -46,8 +46,8 @@ function Footer(props){
                     <h3 className="white-text text-left headfont mr-auto text-5 mt-4">Contact</h3>
                     <div className="row">
                        <div className="col-5 mt-2">
-                            <p className="white-text text-left bodyfont">Address: 
-                            43 & 44 Roop Chambers, Erullappan street, Sowcarpet - 600079</p>
+                            <p className="white-text text-left bodyfont">Email: oneshotaffiliate.com Address: 
+                            43 & 44 Roop Chambers, Erullappan street, Sowcarpet, Chennai - 600079</p>
                        </div>
                     </div>
                 </div>

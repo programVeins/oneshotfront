@@ -3,7 +3,7 @@ import { Jumbotron } from 'reactstrap';
 import Professional from './Professional';
 
 export default class Courses extends Component {
-
+    
     componentDidMount() {
         window.scrollTo(0, 0)
       }
@@ -23,7 +23,7 @@ export default class Courses extends Component {
                 </div>
                 <div className="">
                 <br/>
-                <Professional/>
+                <Professional currentUserEmail={this.props.currentUserEmail}/>
                 </div>
             </div>
         )

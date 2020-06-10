@@ -12,6 +12,7 @@ import Account from './MyAccountComponent';
 import SingleCourseComponent from './SingleCourseComponent';
 import { Cookies, withCookies } from 'react-cookie';
 import { instanceOf } from 'prop-types';
+import PaymentSucess from './PaymentSuccess';
 
 class Main extends Component {
 
@@ -67,11 +68,26 @@ class Main extends Component {
                         logoutToggler={this.logoutToggler}/>
                 <Switch>
                     <Route path="/home" component={Home}/>
-                    <Route exact path="/courses" component={Courses}/>
-                    <Route exact path="/course" component={SingleCourseComponent}/>
+                    <Route exact path="/courses" render={(props) =>
+                        <Courses {...props}
+                        currentUserEmail={this.state.currentUserEmail}/>}/>
+
                     <Route exact path="/about" component={About}/>
+
+                    <Route exact path="/course" render={(props) =>
+                        <SingleCourseComponent {...props}
+                        currentUserEmail={this.state.currentUserEmail}/>}/>
+
+                    <Route exact path="/paymentsuccess" render={(props) =>
+                        <PaymentSucess {...props}
+                        currentUserEmail={this.state.currentUserEmail}/>}/>
+
                     <Route exact path="/signup" render={(props) =>
-                        <SignUp {...props} isLoggedIn={this.state.isLoggedIn}/>}/>
+                        <SignUp {...props} isLoggedIn={this.state.isLoggedIn}
+                         loginToggler={this.loginToggler}
+                         updateEmail={this.updateEmail}
+                         currentUserEmail={this.state.currentUserEmail}
+                        />}/>
 
                     <Route exact path="/login" render={(props) =>
                         <Login {...props} isLoggedIn={this.state.isLoggedIn}

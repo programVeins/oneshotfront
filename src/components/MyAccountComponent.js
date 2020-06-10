@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Jumbotron, Spinner } from 'reactstrap';
-import { Redirect } from 'react-router-dom'
+import { Jumbotron, Spinner, Alert } from 'reactstrap';
+import { Redirect, NavLink } from 'react-router-dom'
 import axios from 'axios'
 
 const backEndUrl = "https://oneshotback.herokuapp.com"
@@ -16,7 +16,8 @@ class Account extends Component {
             email : '',
             contactnum : '',
             torefID : '',
-            loading: false
+            loading: false,
+            hasPaid: 0,
         }
 
         this.fetchUserDeets = this.fetchUserDeets.bind(this)
@@ -45,6 +46,7 @@ class Account extends Component {
         await this.setState({email:res.data.email});
         await this.setState({contactnum:res.data.contactnum});
         await this.setState({torefID:res.data.torefID});
+        await this.setState({hasPaid:res.data.hasPaid});
         await this.setState({loading:false});           
         
     }  
@@ -55,6 +57,7 @@ class Account extends Component {
         if ((this.props.isLoggedIn === 'true') || (this.props.isLoggedIn === true)) {
             return(
                 <div className="container">
+                        
                         <Jumbotron>
                             <div className="row">
                                 <div className="col">
@@ -63,6 +66,14 @@ class Account extends Component {
                             </div>
                             <hr/>
                         </Jumbotron>
+                        {this.state.hasPaid === 1 ? <></> :
+                            <div>
+                                <Alert color="primary">
+                                You have not completed payment. Click <NavLink to="/payment">here</NavLink> to complete payment.
+                                </Alert>
+                                <br/><br/>
+                            </div>    
+                        }
                         <div className="row mt-auto">
                             <div className="col-sm-3 text-left">
                                 <h3 className="headfont">My Details:</h3>

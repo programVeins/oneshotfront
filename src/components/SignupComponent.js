@@ -37,10 +37,31 @@ class Signup extends Component {
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleBlur = this.handleBlur.bind(this);
     this.toggler = this.toggler.bind(this);
+    this.checkPaid = this.checkPaid.bind(this);
   }
 
   componentDidMount() {
     window.scrollTo(0, 0);
+    this.checkPaid();
+  }
+
+  checkPaid() {
+    this.setState({loading: true});
+    const CUE = {
+      currentUserEmail: this.props.currentUserEmail
+    }; 
+    axios.post(backEndUrl + '/api/checkpaid', {CUE})
+    .then(res => {
+    if (res.data.checkpaid === "unpaid") {
+      this.setState({redirect: true});
+      this.setState({loading: false});
+    }
+    else {
+      this.setState({loading: false});
+    }
+    })
+    .catch(err => console.log(err.mess))
+    
   }
 
   toggler(){
@@ -79,12 +100,35 @@ class Signup extends Component {
         fromrefID: this.state.fromrefID
       }
   
-      axios.post(backEndUrl + `/api/postsignup`, { userData })
+      axios.post(backEndUrl + '/api/postsignup', { userData })
         .then(res => {  
-            this.setState({torefID:res.data.refID});
-            this.setState({redirect: true});
-            this.setState({loading: false});
-            console.log(JSON.stringify(this.state));
+            if (res.data.error === 1) {
+              this.setState({modalmess: "Email already exists."});
+              this.toggler();
+              this.setState({loading: false});
+            }
+            else if (res.data.error === 2) {
+              this.setState({modalmess: "Phone number already exists."});
+              this.toggler();
+              this.setState({loading: false});
+            }
+            else if (res.data.error === 3) {
+              this.setState({modalmess: "Email and Contact number already exist."});
+              this.toggler();
+              this.setState({loading: false});
+            }
+            else if (res.data.error === 4) {
+              this.setState({modalmess: "Enter a valid referal code."});
+              this.toggler();
+              this.setState({loading: false});
+            }
+            else {
+              this.props.loginToggler();
+              this.props.updateEmail(this.state.email);
+              this.setState({torefID:res.data.refID});
+              this.setState({redirect: true});
+              this.setState({loading: false});
+            }    
         })
         .catch(error => {
           console.log('Post userData ', error.message);
@@ -132,11 +176,7 @@ class Signup extends Component {
   render() { 
 
     if (this.state.redirect) {
-      return <Redirect to='/course'/>;
-    }
-    else if ((this.props.isLoggedIn === 'true') || (this.props.isLoggedIn === true))
-    {
-      return <Redirect to="/home"/>;
+      return <Redirect to='/payment'/>;
     }
     else if (this.state.loading !== true)
     { 
@@ -233,7 +273,7 @@ class Signup extends Component {
               <br/>
               <div>
                 <Modal isOpen={this.state.toggle} toggle={this.toggler}>
-                  <ModalHeader toggle={this.toggler}>Warning</ModalHeader>
+                  <ModalHeader toggle={this.toggler}>Error</ModalHeader>
                   <ModalBody>
                     {this.state.modalmess}
                   </ModalBody>

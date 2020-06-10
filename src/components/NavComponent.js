@@ -26,7 +26,7 @@ const Navi = (props) => {
 
   const handleLogout = () => {
     setIsLoading(true);
-    axios.get(backEndUrl + `/api/logout`)
+    axios.get(backEndUrl + '/api/logout')
     .then(res => {
       console.log(res.data);
       props.logoutToggler();
