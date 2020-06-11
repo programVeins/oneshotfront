@@ -7,7 +7,7 @@ class About extends Component {
  
     componentDidMount() {
         window.scrollTo(0, 0)
-      }
+    }
 
     render() {
         return(
@@ -27,7 +27,7 @@ class About extends Component {
                         </div>
                         <div className="container">
                             <div className="row mt-5">
-                                <div className="col-sm-3 text-left">
+                                <div className="col-md-3 text-left">
                                     <h3 className="headfont">About Oneshot Affiliate</h3>
                                     <hr/>
                                 </div>
