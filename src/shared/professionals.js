@@ -46,7 +46,7 @@ export const professionals =  [
         name: "The Adventurous Palate",
         course: "Cooking",
         img: "/assets/images/Professionals/7.png",
-        description: "Akshay has worked with several millennials and Gen-X helping them discover & Unleash their potential. He believes that an individual's life is the result of their interpretation of their experiences. Akshay's mission in life to transform the lives of millions and touch the lives of a billion people through his seminars&writing. His life's ultimate mission is to build systems that simplify lives. He looks to transform the current generation of people by destroying their limiting beliefs which will lead us onto better incoming future generations. He aims to change the narrative about intelligence and build an emotionally intelligent society that will transform the way world functions."
+        description: "The Adventurous Palate run by three best friends, Nishita, Prerana and Isha and whats common between them? all of them really love food! Be it making it or exploring restaurants for amazing food. Nishita has a huge love for baking which always drives her diets in vain and Isha is a typical  foodie by heart, gorge on the two extremes of the food spectrum. It's either street food or the classic eatery. Prerana is more into the peppery and zesty savory. They reflect her personality to the Z. She's a fun and vibrant soul who's up for food anytime, anywhere. Together they formed The Adventurous Palate."
     }
 
 ]
