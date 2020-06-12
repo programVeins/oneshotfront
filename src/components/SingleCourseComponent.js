@@ -71,11 +71,19 @@ export class SingleCourseComponent extends Component {
                         </div>
                         <hr/>   
                     </Jumbotron>
-                    <div className="row wrapperrow">
-                        <div className="col wrappercol">
+                    <div className="row">
+                        <div className="col">
                             <VideoPlayer link={thisCourse.link}/>
                         </div>
                     </div>
+                    <br/><br/>
+                    <div className="row">
+                        <div className="col">
+                            <p className="bodyfont text-9">{thisCourse.description}</p>
+                        </div>
+                    </div>
+                    <Breaks/>
+
             </div>
         )
     }
