@@ -3,6 +3,8 @@ import { Jumbotron, Spinner } from 'reactstrap'
 import Breaks from './Breaks';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
+import VideoPlayer from './VideoComponent';
+import { professionals } from '../shared/professionals';
 
 const backEndUrl = "https://oneshotback.herokuapp.com"
 
@@ -23,6 +25,7 @@ export class SingleCourseComponent extends Component {
         window.scrollTo(0,0);
         this.checkPaid();
     }
+
 
     checkPaid() {
         this.setState({loading: true});
@@ -61,11 +64,16 @@ export class SingleCourseComponent extends Component {
                 <Jumbotron>
                         <div className="row">
                             <div className="col">
-                                <h1 className="headfont text-2">Course</h1>
+                                <h1 className="headfont text-2">{professionals[this.props.courseID].course}</h1>
                             </div>
                         </div>
                         <hr/>   
                     </Jumbotron>
+                    <div className="row wrapperrow">
+                        <div className="col wrappercol">
+                            <VideoPlayer/>
+                        </div>
+                    </div>
             </div>
         )
     }

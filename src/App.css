@@ -204,3 +204,15 @@ u {
   color: rgb(46, 108, 179);
   border: none;
 }
+
+.wrapperrow {
+  height: 100vh;
+}
+.wrappercol {
+  height: 100vh;
+}
+
+.vid {
+  height: auto;
+  width: 100%;
+}

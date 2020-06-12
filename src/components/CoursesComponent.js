@@ -5,8 +5,12 @@ import Professional from './Professional';
 export default class Courses extends Component {
     
     componentDidMount() {
-        window.scrollTo(0, 0)
-      }
+        window.scrollTo(0, 0);
+    }
+
+    componentDidUpdate() {
+        console.log("email : "+this.props.currentUserEmail);
+    }
 
     render() {
         return (
@@ -23,7 +27,9 @@ export default class Courses extends Component {
                 </div>
                 <div className="">
                 <br/>
-                <Professional currentUserEmail={this.props.currentUserEmail}/>
+                <Professional currentUserEmail={this.props.currentUserEmail}
+                courseID={this.props.courseID}
+                updateCourseID={this.props.updateCourseID}/>
                 </div>
             </div>
         )

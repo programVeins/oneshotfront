@@ -30,7 +30,7 @@ class Account extends Component {
     }
     
     componentDidUpdate() {
-        console.log("state email :" +this.state.email)
+        
     }
       
     async fetchUserDeets() {

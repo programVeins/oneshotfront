@@ -14,12 +14,12 @@ const Professional = (props) => {
     const [modalmess, setModalmess] = useState('');
     const toggle = () => setModal(!modal);
 
-    const handleViewCourse = () => {
+    const handleViewCourse = (courseID) => {
         setLoading(true);
         const CUE = {
             currentUserEmail: props.currentUserEmail
         }; 
-        console.log(CUE)
+        console.log(CUE);
         axios.post(backEndUrl + '/api/checkpaid', {CUE})
         .then(res => {
             if (res.data.checkpaid === "nouser") {
@@ -35,6 +35,9 @@ const Professional = (props) => {
             else if (res.data.checkpaid === "paid") {
                 setRedirect(true);
                 setLoading(false);
+                console.log("Be:Setting course ID to : " + courseID);
+                props.updateCourseID(courseID);
+                console.log("Af:Setting course ID to : " + courseID);
             }
         })
         .catch(err => {
@@ -66,7 +69,7 @@ const Professional = (props) => {
                                               <CardText className="bodyfont text-justify text-10">
                                                   {prof.description}
                                               </CardText>
-                                              {loading? <Button color="primary"><Spinner size="sm" color="light"/></Button> : <Button onClick={handleViewCourse} color="primary" className="text-9">View Course</Button>}
+                                              {loading? <Button color="primary"><Spinner size="sm" color="light"/></Button> : <Button onClick={() => handleViewCourse(prof.id)} color="primary" className="text-9">View Course</Button>}
                                           </CardBody>
                                       </Card>
                                   </div>
@@ -88,7 +91,7 @@ const Professional = (props) => {
                                                   <CardText className="bodyfont text-justify text-10">
                                                       {prof.description}
                                                   </CardText>
-                                                  {loading? <Button color="primary"><Spinner size="sm" color="light"/></Button> : <Button onClick={handleViewCourse} color="primary" className="text-9">View Course</Button>}
+                                                  {loading? <Button color="primary"><Spinner size="sm" color="light"/></Button> : <Button onClick={() => handleViewCourse(prof.id)} color="primary" className="text-9">View Course</Button>}
                                               </CardBody>
                                           </Card>
                                       </div>
@@ -111,7 +114,7 @@ const Professional = (props) => {
                                               <CardText className="bodyfont text-justify text-10">
                                                   {prof.description}
                                               </CardText>
-                                              {loading? <Button color="primary"><Spinner size="sm" color="light"/></Button> : <Button onClick={handleViewCourse} color="primary" className="text-9">View Course</Button>}
+                                              {loading? <Button color="primary"><Spinner size="sm" color="light"/></Button> : <Button onClick={() => handleViewCourse(prof.id)} color="primary" className="text-9">View Course</Button>}
                                           </CardBody>
                                       </Card>
                                   </div>

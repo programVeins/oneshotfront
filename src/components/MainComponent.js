@@ -26,11 +26,17 @@ class Main extends Component {
         const { cookies } = props;
         this.state = {
             isLoggedIn: cookies.get('isLoggedIn') || false,
-            currentUserEmail: cookies.get('currentUserEmail') || ''
+            currentUserEmail: cookies.get('currentUserEmail') || '',
+            courseID: 0
         };
-        this.loginToggler = this.loginToggler.bind(this)
-        this.logoutToggler = this.logoutToggler.bind(this)
-        this.updateEmail = this.updateEmail.bind(this)
+        this.loginToggler = this.loginToggler.bind(this);
+        this.logoutToggler = this.logoutToggler.bind(this);
+        this.updateEmail = this.updateEmail.bind(this);
+        this.updateCourseID = this.updateCourseID.bind(this);
+    }
+
+    updateCourseID(cID) {
+        this.setState({courseID: cID});
     }
 
     updateEmail(em) {
@@ -54,10 +60,10 @@ class Main extends Component {
     }
 
     componentDidMount() {
-        console.log("email : " + this.state.currentUserEmail)
+        console.log("email : " + this.state.currentUserEmail);
     }
     componentDidUpdate() {
-        console.log("email : " + this.state.currentUserEmail)
+        console.log("email : " + this.state.currentUserEmail);
     }
 
     render(){
@@ -70,13 +76,16 @@ class Main extends Component {
                     <Route path="/home" component={Home}/>
                     <Route exact path="/courses" render={(props) =>
                         <Courses {...props}
-                        currentUserEmail={this.state.currentUserEmail}/>}/>
+                        currentUserEmail={this.state.currentUserEmail}
+                        courseID={this.state.courseID}
+                        updateCourseID={this.updateCourseID}/>}/>
 
                     <Route exact path="/about" component={About}/>
 
                     <Route exact path="/course" render={(props) =>
                         <SingleCourseComponent {...props}
-                        currentUserEmail={this.state.currentUserEmail}/>}/>
+                        currentUserEmail={this.state.currentUserEmail}
+                        courseID={this.state.courseID}/>}/>
 
                     <Route exact path="/paymentsuccess" render={(props) =>
                         <PaymentSucess {...props}
