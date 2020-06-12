@@ -4,14 +4,16 @@ export const professionals =  [
         name: "Sumukh",
         course: "Legal Sciences",
         img: "/assets/images/Professionals/1.png",
-        description: "Sumukh who is currently pursuing BBA LLB at Christ University Bangalore, and has been awarded the following: BEST MOOTER - 3rd National Anand College of Legal Studies Moot and Honourable Commendation - Harvard Model United Nations 2018"
+        description: "Sumukh who is currently pursuing BBA LLB at Christ University Bangalore, and has been awarded the following: BEST MOOTER - 3rd National Anand College of Legal Studies Moot and Honourable Commendation - Harvard Model United Nations 2018",
+        link: "PL8ikld4ky22-VgP1n4RXbrolJc-1zMlWK"
     },
     {
         id: 1,
         name: "Satvik",
         course: "Economics",
         img: "/assets/images/Professionals/2.png",
-        description: "Satvik is a Financial analyst and has worked with IDBI Capital, Diligent Financial Services and virtual Internship with Citi & BCG. He has been the President of Toastmasters'. Youth Leadership Program  and he himself is a leadership coach & teacher who is a National Level sports player and has participated in more than 25 fests accross Bangalore."
+        description: "Satvik is a Financial analyst and has worked with IDBI Capital, Diligent Financial Services and virtual Internship with Citi & BCG. He has been the President of Toastmasters'. Youth Leadership Program  and he himself is a leadership coach & teacher who is a National Level sports player and has participated in more than 25 fests accross Bangalore.",
+        link: "PL8ikld4ky22-VgP1n4RXbrolJc-1zMlWK"
     },
     {
         id: 2,

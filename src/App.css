@@ -205,14 +205,17 @@ u {
   border: none;
 }
 
-.wrapperrow {
-  height: 100vh;
+.video-wrapper {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
 }
-.wrappercol {
-  height: 100vh;
-}
-
-.vid {
-  height: auto;
-  width: 100%;
+ 
+.video-wrapper iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
 }

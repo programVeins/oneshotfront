@@ -59,19 +59,21 @@ export class SingleCourseComponent extends Component {
                 </div>
             );
         }
+
+        const thisCourse = professionals[this.props.courseID];
         return (
             <div className="container">
                 <Jumbotron>
                         <div className="row">
                             <div className="col">
-                                <h1 className="headfont text-2">{professionals[this.props.courseID].course}</h1>
+                                <h1 className="headfont text-2">{thisCourse.course}</h1>
                             </div>
                         </div>
                         <hr/>   
                     </Jumbotron>
                     <div className="row wrapperrow">
                         <div className="col wrappercol">
-                            <VideoPlayer/>
+                            <VideoPlayer link={thisCourse.link}/>
                         </div>
                     </div>
             </div>
