@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Jumbotron , Button, Media, Card, CardText, CardBody,
     CardTitle } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
+import VideoPlayer from './VideoComponent'
 
 
 
@@ -52,6 +53,21 @@ export default class Home extends Component {
                     <br/>
                     <div className="col"><NavLink to="/signup"><Button color="primary" size="lg" className="bodyfont text-7">⠀⠀⠀Start earning⠀⠀⠀</Button></NavLink></div>
                 </Jumbotron>
+                <br/>
+                <div className="container-fluid blackbg">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col">
+                                <br/>
+                                <h1 className="headfont white-text text-2">Here's what we do</h1>
+                                <br/>
+                                <VideoPlayer vlink="PaByz3jC_IU"/>
+                                <br/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br/>
                 <div className="container">
                     <div className="row">
                         <div className="col mt-5">
@@ -62,7 +78,7 @@ export default class Home extends Component {
                     </div>
                     <div className="row">
                         <div className="col mt-auto">
-                            <h5 className="bodyfont text-justify text-8 my-auto">OneShot Affiliate marketing is the simple form of education and business put together and you only need two minutes to understand it. The whole process is easy and effective. Here’s how it works, our website acts as an educational platform serving you with an amazing bundle of online courses. The courses allow you to earn money alongside learning and all this with a minimal investment and quick return! You make a payment of Rs 1000 through our website and get access to our course programs along with the affiliate program. Now you work as part time salesman of this company and try to refer it to as many people as you can. In return for each sale made by you , get a commission of Rs 500 within a week. i.e We pay our all our referrers once a week. So For eg. You make 100 sales then you earn 50,000. Don't get us wrong but this is a business but a business with a system like no other. OneShot can be your own personal ATM. We host your website and data for 1 year for a one time cost of just Rs1000. Anyone can understand the whole concept in 60 seconds or less. There's really not much else to tell you. I told you it was simple.</h5>
+                            <h5 className="bodyfont text-justify text-8 my-auto">OneShot Affiliate marketing is the simple form of education and business put together and you only need two minutes to understand it. The whole process is easy and effective. Here’s how it works, our website acts as an educational platform serving you with an amazing bundle of online courses. The courses allow you to earn money alongside learning and all this with a minimal investment and quick return! You make a payment of Rs 1000 through our website and get access to our course programs along with the affiliate program. Now you work as a part-time salesman of this company and try to refer it to as many people as you can. In return for each sale made by you, get a commission of Rs 500 within a week. i.e We pay all our referrers once a week. So For eg. You make 100 sales then you earn 50,000. Don't get us wrong but this is a business but a business with a system like no other. OneShot can be your own personal ATM. We host your website and data for 1 year for a one time cost of just Rs1000. Anyone can understand the whole concept in 60 seconds or less. There's really not much else to tell you. I told you it was simple.</h5>
                         </div>
                     </div>
                     <br/><br/><br/><br/>

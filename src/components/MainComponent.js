@@ -9,10 +9,12 @@ import Login from './LoginComponent';
 import Courses from './CoursesComponent';
 import Payment from './PaymentComponent';
 import Account from './MyAccountComponent';
+import PaymentSucess from './PaymentSuccess';
+import Admin from './Admin';
 import SingleCourseComponent from './SingleCourseComponent';
 import { Cookies, withCookies } from 'react-cookie';
 import { instanceOf } from 'prop-types';
-import PaymentSucess from './PaymentSuccess';
+
 
 class Main extends Component {
 
@@ -73,7 +75,13 @@ class Main extends Component {
                         loginToggler={this.loginToggler}
                         logoutToggler={this.logoutToggler}/>
                 <Switch>
+
                     <Route path="/home" component={Home}/>
+
+                    <Route path="/admin" render={(props) =>
+                        <Admin {...props}
+                        currentUserEmail={this.state.currentUserEmail}/>}/>
+
                     <Route exact path="/courses" render={(props) =>
                         <Courses {...props}
                         currentUserEmail={this.state.currentUserEmail}

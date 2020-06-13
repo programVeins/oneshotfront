@@ -73,7 +73,7 @@ export class SingleCourseComponent extends Component {
                     </Jumbotron>
                     <div className="row">
                         <div className="col">
-                            <VideoPlayer link={thisCourse.link}/>
+                            <VideoPlayer plink={thisCourse.link}/>
                         </div>
                     </div>
                     <br/><br/>

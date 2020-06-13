@@ -59,6 +59,9 @@
 .white-text {
   color: azure !important;
 }
+.red-text {
+  color: rgb(245, 102, 102) !important;
+}
 
 .white-line {
   background-color: rgba(240, 255, 255, 0.432);

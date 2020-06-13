@@ -1,8 +1,15 @@
 import React from 'react';
 
 const VideoPlayer = (props) => {
-  var link = props.link;
-  const SRC= "https://www.youtube.com/embed/videoseries?list=" + link + "&rel=0&modestbranding=1";
+  var plink = props.plink;
+  var vlink = props.vlink;
+  var SRC = ''
+  if (plink != null) {
+    SRC= "https://www.youtube.com/embed/videoseries?list=" + plink + "&rel=0&modestbranding=1";
+  }
+  if (vlink != null) {
+    SRC= "https://www.youtube.com/embed/" + vlink + "?rel=0&modestbranding=1";
+  }
   return (
     <div className="video-wrapper">
       <iframe
