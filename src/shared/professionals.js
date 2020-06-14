@@ -1,6 +1,7 @@
 export const professionals =  [
     {
         id: 0,
+        cdes: "Basic legal knowledge for everyone, because you never know when it comes to your rescue!",
         name: "Sumukh",
         course: "Legal Sciences",
         img: "/assets/images/Professionals/1.png",
@@ -9,6 +10,7 @@ export const professionals =  [
     },
     {
         id: 1,
+        cdes: "Basic economical knowledge, to manage your finances in your day-to-day life to increase your earnings efficiently!",
         name: "Satvik",
         course: "Economics",
         img: "/assets/images/Professionals/2.png",
@@ -17,13 +19,16 @@ export const professionals =  [
     },
     {
         id: 2,
+        cdes: "Watch as our instructor Veeresh guides you on your way to become a Pro Youtuber!",
         name: "Veeresh",
-        course: "Youtube Course",
+        course: "Youtubing",
         img: "/assets/images/Professionals/3.png",
-        description: "Veeresh is a college student and a school topper. He is a YouTuber also known as HolyFrenchFry. He excels in Public relations and has won events in college for the same. Also participating in various extracurricular activities like Football and Tennis and activities like Mime and Theatre for acting related. He has completed courses and is certified in Sales, Digital Marketing and Negotiation online. He recently surpassed a thousand Subscribers and fourty thousand views on YouTube."
+        description: "Veeresh is a college student and a school topper. He is a YouTuber also known as HolyFrenchFry. He excels in Public relations and has won events in college for the same. Also participating in various extracurricular activities like Football and Tennis and activities like Mime and Theatre for acting related. He has completed courses and is certified in Sales, Digital Marketing and Negotiation online. He recently surpassed a thousand Subscribers and fourty thousand views on YouTube.",
+        link:"PLzyiOZFDSL-6hu2DyFJ3xosku2sDN4MV7"
     },
     {
         id: 3,
+        cdes: "Avoid spending on gym training, and stay fit at home, during this quarantine period!",
         name: "Brian",
         course: "Home Fitness",
         img: "/assets/images/Professionals/4.png",
@@ -31,20 +36,25 @@ export const professionals =  [
     },
     {
         id: 4,
+        cdes: "Sweat your body with fun and style! Watch exclusive zumba dance tutorials from Ehsaas!",
         name: "Ehsaas",
         course: "Zumba Dance",
         img: "/assets/images/Professionals/5.png",
-        description: "EHSAAS - 'a feeling', that's what dance means to us \u2764 Now let's know a little bit about the founders of Ehsaas. Vishal, the one who's loved for his style and is known as a powerhouse because of the charismatic and energetic vibe that he creates when he's around. Nirali, the one who is appreciated for her elegant moves and graceful expressions, has started dancing since childhood. She's a bundle of joy and creativity. Past 2 years we've choreographed many sangeets and organized fun and creative events for our clients. According to us, Zumba is the best way to lose calories as you can do it while losing yourself to the beautiful rythm of music. So we are here with a set of fun zumba routines for 'everybody and every body'. Do follow us on Instagram @ehsaas_bynv and subscribe to our youtube channel (Ehsaas- Nirali & Vishal) for amazing dance routines."
+        description: "EHSAAS - 'a feeling', that's what dance means to us \u2764 Now let's know a little bit about the founders of Ehsaas. Vishal, the one who's loved for his style and is known as a powerhouse because of the charismatic and energetic vibe that he creates when he's around. Nirali, the one who is appreciated for her elegant moves and graceful expressions, has started dancing since childhood. She's a bundle of joy and creativity. Past 2 years we've choreographed many sangeets and organized fun and creative events for our clients. According to us, Zumba is the best way to lose calories as you can do it while losing yourself to the beautiful rythm of music. So we are here with a set of fun zumba routines for 'everybody and every body'. Do follow us on Instagram @ehsaas_bynv and subscribe to our youtube channel (Ehsaas- Nirali & Vishal) for amazing dance routines.",
+        link:"PLzyiOZFDSL-5FRdPM4KtDZfcBZl5s4kbp"
     },
     {
         id: 5,
+        cdes: "Emotional intelligence course to keep yourself self-sufficent and happy, even during toxic times!",
         name: "Akshay Taleda",
         course: "Life Transformation",
         img: "/assets/images/Professionals/6.png",
-        description: "Akshay has worked with several millennials and Gen-X helping them discover & Unleash their potential. He believes that an individual's life is the result of their interpretation of their experiences. Akshay's mission in life to transform the lives of millions and touch the lives of a billion people through his seminars&writing. His life's ultimate mission is to build systems that simplify lives. He looks to transform the current generation of people by destroying their limiting beliefs which will lead us onto better incoming future generations. He aims to change the narrative about intelligence and build an emotionally intelligent society that will transform the way world functions."
+        description: "Akshay has worked with several millennials and Gen-X helping them discover & Unleash their potential. He believes that an individual's life is the result of their interpretation of their experiences. Akshay's mission in life to transform the lives of millions and touch the lives of a billion people through his seminars&writing. His life's ultimate mission is to build systems that simplify lives. He looks to transform the current generation of people by destroying their limiting beliefs which will lead us onto better incoming future generations. He aims to change the narrative about intelligence and build an emotionally intelligent society that will transform the way world functions.",
+        link:"PLzyiOZFDSL-6zJ5eF0wolCyZXw4n9bQVD"
     },
     {
         id: 6,
+        cdes: "Learn to be a masterchef, with our one and only cooking course!",
         name: "The Adventurous Palate",
         course: "Cooking",
         img: "/assets/images/Professionals/7.png",

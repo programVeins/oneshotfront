@@ -176,7 +176,7 @@ class Signup extends Component {
   render() { 
 
     if (this.state.redirect) {
-      return <Redirect to='/payment'/>;
+      return <Redirect to='/midpay'/>;
     }
     else if (this.state.loading !== true)
     { 

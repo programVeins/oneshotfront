@@ -78,11 +78,38 @@ export class SingleCourseComponent extends Component {
                     </div>
                     <br/><br/>
                     <div className="row">
+                        <div className="col-sm-3">
+                            <p className="headfont text-7 text-left">Course Description: </p>
+                        </div>
                         <div className="col">
-                            <p className="bodyfont text-9">{thisCourse.description}</p>
+                            <p className="bodyfont text-9 text-left">{thisCourse.cdes}</p>
                         </div>
                     </div>
-                    <Breaks/>
+                    <div className="row">
+                        <div className="col-sm-3">
+                            <p className="headfont text-7 text-left">Trainer: </p>
+                        </div>
+                        <div className="col">
+                            <p className="bodyfont text-9 text-left">{thisCourse.name}</p>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-sm-3">
+                            <p className="headfont text-7 text-left">Instagram handle: </p>
+                        </div>
+                        <div className="col">
+                            <p className="bodyfont text-9 text-left">{thisCourse.ig}</p>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-sm-3">
+                            <p className="headfont text-7 text-left">Contact number (for enquires): </p>
+                        </div>
+                        <div className="col">
+                            <p className="bodyfont text-9 text-left">{thisCourse.cnum}</p>
+                        </div>
+                    </div>
+                    <br/><br/><br/>
 
             </div>
         )

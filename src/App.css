@@ -191,6 +191,10 @@ u {
 .text-10 {
   font-size: calc(80% + 0.1vh + 0.1vw);
 }
+.text-smol {
+  font-size: calc(55% + 0.1vh + 0.1vw);
+}
+
 
 .nonebutton {
   background: none;

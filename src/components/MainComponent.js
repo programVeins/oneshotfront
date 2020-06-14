@@ -10,10 +10,12 @@ import Courses from './CoursesComponent';
 import Payment from './PaymentComponent';
 import Account from './MyAccountComponent';
 import PaymentSucess from './PaymentSuccess';
+import MidPay from './MidpayComponent';
 import Admin from './Admin';
 import SingleCourseComponent from './SingleCourseComponent';
 import { Cookies, withCookies } from 'react-cookie';
 import { instanceOf } from 'prop-types';
+
 
 
 class Main extends Component {
@@ -89,6 +91,10 @@ class Main extends Component {
                         updateCourseID={this.updateCourseID}/>}/>
 
                     <Route exact path="/about" component={About}/>
+
+                    <Route path="/midpay" render={(props) =>
+                        <MidPay {...props}
+                        currentUserEmail={this.state.currentUserEmail}/>}/>
 
                     <Route exact path="/course" render={(props) =>
                         <SingleCourseComponent {...props}

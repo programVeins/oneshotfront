@@ -75,54 +75,72 @@ export default class Admin extends Component {
             console.log(usrsarr);
             console.log(usrsarr[0]);
             return(   
-                <div className="container">
+                <div className="container-fluid">
                     <br/><br/>
                     <h3 className="headfont text-4">Database</h3>
                     <br/><br/>
                     <h3 className="headfont text-4 text-left"><u>Users:</u></h3>
                     <br/><br/>
                     <div className="row">
-                        <div className="col-lg-2">
-                            <p className="headfont text-6">Name</p>
+                        <div className="col">
+                            <p className="headfont text-9">Name</p>
                         </div>
-                        <div className="col-lg-2">
-                            <p className="headfont text-6">Email</p>
+                        <div className="col">
+                            <p className="headfont text-9">Email</p>
                         </div>
-                        <div className="col-lg-2">
-                            <p className="headfont text-6">Number</p>
+                        <div className="col">
+                            <p className="headfont text-9">Number</p>
                         </div>
-                        <div className="col-lg-2">
-                            <p className="headfont text-6">Payment</p>
+                        <div className="col">
+                            <p className="headfont text-9">Payment</p>
                         </div>
-                        <div className="col-lg-2">
-                            <p className="headfont text-6">Referals</p>
+                        <div className="col">
+                            <p className="headfont text-9">Referals</p>
                         </div>
-                        <div className="col-lg-2">
-                            <p className="headfont text-6">Ref Code</p>
+                        <div className="col">
+                            <p className="headfont text-9">Ref Code</p>
+                        </div>
+                        <div className="col">
+                            <p className="headfont text-9">Pay/UPI/AC No.</p>
+                        </div>
+                        <div className="col">
+                            <p className="headfont text-9">Bank Name/Branch</p>
+                        </div>
+                        <div className="col">
+                            <p className="headfont text-9">IFSC</p>
                         </div>
                     </div>
 
 
                     {usrsarr.map((user, index) => (
                         <div className="row">
-                            <div className="col-lg-2">
-                                {user.isAdmin ? <p className="red-text" key={index}><b>{user.firstname + user.lastname}</b></p>
-                                : <p key={index}>{user.firstname + user.lastname}</p>}
+                            <div className="col">
+                                {user.isAdmin ? <p className="red-text text-smol bodyfont" key={index}><b>{user.firstname + user.lastname}</b></p>
+                                : <p className="text-smol bodyfont text-center" key={index}>{user.firstname + user.lastname}</p>}
                             </div>
-                            <div className="col-lg-2">
-                                <p key={index}>{user.email}</p>
+                            <div className="col">
+                                <p className="text-smol bodyfont text-center" key={index}>{user.email}</p>
                             </div>
-                            <div className="col-lg-2">
-                                <p key={index}>{user.contactnum}</p>
+                            <div className="col">
+                                <p className="text-smol bodyfont text-center" key={index}>{user.contactnum}</p>
                             </div>
-                            <div className="col-lg-2">
-                                <p key={index}>{ user.isAdmin ? "ADMIN" : (user.hasPaid === 1 ? "Paid" : "Not Paid") }</p>
+                            <div className="col">
+                                <p className="text-smol bodyfont text-center" key={index}>{ user.isAdmin ? "ADMIN" : (user.hasPaid === 1 ? "Paid" : "Not Paid") }</p>
                             </div>
-                            <div className="col-lg-2">
-                                <p key={index}>{user.numberOfReferals > 0 ? user.numberOfReferals : 0}</p>
+                            <div className="col">
+                                <p className="text-smol bodyfont text-center" key={index}>{user.numberOfReferals > 0 ? user.numberOfReferals : 0}</p>
                             </div>
-                            <div className="col-lg-2">
-                                <p key={index}>{user.torefID}</p>
+                            <div className="col">
+                                <p className="text-smol bodyfont text-center" key={index}>{user.torefID}</p>
+                            </div>
+                            <div className="col">
+                                <p className="text-smol bodyfont text-center" key={index}>{user.paynum}</p>
+                            </div>
+                            <div className="col">
+                                <p className="text-smol bodyfont text-center" key={index}>{user.bname === '' ? "-" : user.bname}</p>
+                            </div>
+                            <div className="col">
+                                <p className="text-smol bodyfont text-center" key={index}>{user.ifsc === '' ? "-" : user.ifsc}</p>
                             </div>
                         </div>
                     ))} 
