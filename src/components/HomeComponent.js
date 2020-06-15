@@ -9,7 +9,10 @@ import VideoPlayer from './VideoComponent'
 export default class Home extends Component {
 
     componentDidMount() {
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
+        axios.get('/api/load')
+        .then(res => console.log(res.data))
+        .catch(err => console.log(err.mess));
       }
       
     render() {
