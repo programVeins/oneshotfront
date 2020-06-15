@@ -3,7 +3,7 @@ import { Jumbotron , Button, Media, Card, CardText, CardBody,
     CardTitle } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
 import VideoPlayer from './VideoComponent'
-
+import axios from 'axios';
 
 
 export default class Home extends Component {
