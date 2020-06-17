@@ -226,3 +226,18 @@ u {
    top: 0;
    width: 100%;
 }
+
+
+
+/* Transitions */
+
+.fade-appear {
+  opacity : 0;
+  z-index: 1;
+}
+
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity 1000ms ease;
+}
+ 

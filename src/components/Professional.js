@@ -3,6 +3,7 @@ import { Card, CardBody, CardText, Button, Modal, ModalBody, ModalHeader, ModalF
 import { professionals } from '../shared/professionals';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
+import { Fade, Stagger } from 'react-animation-components';
 
 const backEndUrl = "https://oneshotback.herokuapp.com"
 
@@ -52,36 +53,37 @@ const Professional = (props) => {
         return (
             <div className="container">
               <ul className="list-unstyled">
-                  {professionals.map((prof,index) => {
-                      if (prof.id % 2 === 0) {
-                          return (<li key={index}>
-                              <div className="row">
-                                  <div className="col-xl-3">
-                                      <img src={prof.img} alt="professional name" height="250px" width="250px" className="rounded"/>
+                  <Stagger in delay={200}>
+                      {professionals.map((prof,index) => {
+                          if (prof.id % 2 === 0) {
+                              return (<Fade in><li key={index}>
+                                  <div className="d-none d-xl-block">
+                                      <div className="row">
+                                          <div className="col-xl-3">
+                                              <img src={prof.img} alt="professional name" height="250px" width="250px" className="rounded"/>
+                                          </div>
+                                          
+                                          <div className="col-xl-9">
+                                              <Card>
+                                                  <CardBody>
+                                                      <h4 className="headfont text-6">
+                                                          {prof.course} - {prof.name}
+                                                      </h4>
+                                                      <br/>
+                                                      <CardText className="bodyfont text-justify text-10">
+                                                          {prof.description}
+                                                      </CardText>
+                                                      {loading? <Button color="primary"><Spinner size="sm" color="light"/></Button> : <Button onClick={() => handleViewCourse(prof.id)} color="primary" className="headfont text-9">View Course</Button>}
+                                                  </CardBody>
+                                              </Card>
+                                          </div>
+                                      </div>
                                   </div>
-                                  <div className="col-xl-9 mt-5">
-                                      <Card>
-                                          <CardBody>
-                                              <h4 className="headfont text-6">
-                                                  {prof.course} - {prof.name}
-                                              </h4>
-                                              <br/>
-                                              <CardText className="bodyfont text-justify text-10">
-                                                  {prof.description}
-                                              </CardText>
-                                              {loading? <Button color="primary"><Spinner size="sm" color="light"/></Button> : <Button onClick={() => handleViewCourse(prof.id)} color="primary" className="text-9">View Course</Button>}
-                                          </CardBody>
-                                      </Card>
-                                  </div>
-                              </div>
-                              <br/><br/>
-                          </li>);
-                      }
-                      else {
-                          return (<li key={index}>
-                              <div className="d-none d-xl-block">
-                                  <div className="row">
-                                      <div className="col-sm-9">
+                                  <div className="row d-block d-xl-none">
+                                      <div className="col">
+                                          <img src={prof.img} alt="professional name" height="250px" width="250px" className="rounded"/>
+                                      </div>
+                                      <div className="col mt-5">
                                           <Card>
                                               <CardBody>
                                                   <h4 className="headfont text-6">
@@ -91,39 +93,62 @@ const Professional = (props) => {
                                                   <CardText className="bodyfont text-justify text-10">
                                                       {prof.description}
                                                   </CardText>
-                                                  {loading? <Button color="primary"><Spinner size="sm" color="light"/></Button> : <Button onClick={() => handleViewCourse(prof.id)} color="primary" className="text-9">View Course</Button>}
+                                                  {loading? <Button color="primary"><Spinner size="sm" color="light"/></Button> : <Button onClick={() => handleViewCourse(prof.id)} color="primary" className="headfont text-9">View Course</Button>}
                                               </CardBody>
                                           </Card>
                                       </div>
-                                      <div className="col-sm-3">
-                                          <img src={prof.img} alt="professional name" height="250px" width="250px" className="rounded"/>
+                                  </div>
+                                  <br/><br/>
+                              </li></Fade>);
+                          }
+                          else {
+                              return (<Fade in><li key={index}>
+                                  <div className="d-none d-xl-block">
+                                      <div className="row">
+                                          <div className="col-sm-9">
+                                              <Card>
+                                                  <CardBody>
+                                                      <h4 className="headfont text-6">
+                                                          {prof.course} - {prof.name}
+                                                      </h4>
+                                                      <br/>
+                                                      <CardText className="bodyfont text-justify text-10">
+                                                          {prof.description}
+                                                      </CardText>
+                                                      {loading? <Button color="primary"><Spinner size="sm" color="light"/></Button> : <Button onClick={() => handleViewCourse(prof.id)} color="primary" className="headfont text-9">View Course</Button>}
+                                                  </CardBody>
+                                              </Card>
+                                          </div>
+                                          <div className="col-sm-3">
+                                              <img src={prof.img} alt="professional name" height="250px" width="250px" className="rounded"/>
+                                          </div>
                                       </div>
                                   </div>
-                              </div>
-                              <div className="row d-block d-xl-none">
-                                  <div className="col">
-                                      <img src={prof.img} alt="professional name" height="250px" width="250px" className="rounded"/>
+                                  <div className="row d-block d-xl-none">
+                                      <div className="col">
+                                          <img src={prof.img} alt="professional name" height="250px" width="250px" className="rounded"/>
+                                      </div>
+                                      <div className="col mt-5">
+                                          <Card>
+                                              <CardBody>
+                                                  <h4 className="headfont text-6">
+                                                      {prof.course} - {prof.name}
+                                                  </h4>
+                                                  <br/>
+                                                  <CardText className="bodyfont text-justify text-10">
+                                                      {prof.description}
+                                                  </CardText>
+                                                  {loading? <Button color="primary"><Spinner size="sm" color="light"/></Button> : <Button onClick={() => handleViewCourse(prof.id)} color="primary" className="headfont text-9">View Course</Button>}
+                                              </CardBody>
+                                          </Card>
+                                      </div>
                                   </div>
-                                  <div className="col mt-5">
-                                      <Card>
-                                          <CardBody>
-                                              <h4 className="headfont text-6">
-                                                  {prof.course} - {prof.name}
-                                              </h4>
-                                              <br/>
-                                              <CardText className="bodyfont text-justify text-10">
-                                                  {prof.description}
-                                              </CardText>
-                                              {loading? <Button color="primary"><Spinner size="sm" color="light"/></Button> : <Button onClick={() => handleViewCourse(prof.id)} color="primary" className="text-9">View Course</Button>}
-                                          </CardBody>
-                                      </Card>
-                                  </div>
-                              </div>
-                              <br/><br/>
-                          </li>);
-                      }
-                      
-                  })}
+                                  <br/><br/>
+                              </li></Fade>);
+                          }
+                          
+                      })}
+                  </Stagger>
               </ul>
               <Modal isOpen={modal} toggle={toggle}>
                       <ModalHeader toggle={toggle}>Error</ModalHeader>

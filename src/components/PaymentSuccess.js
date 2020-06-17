@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Jumbotron, Button, Spinner } from 'reactstrap'; 
 import { NavLink, Redirect } from 'react-router-dom';
 import axios from 'axios';
+import { CSSTransition } from 'react-transition-group';
 
 const backEndUrl = "https://oneshotback.herokuapp.com"
 
@@ -44,40 +45,42 @@ class PaymentSucess extends Component {
     render() {
         if (this.state.redirect === false) {
             return(
-                <div className="container">
-                        <Jumbotron>
-                            <div className="row">
-                                <div className="col">
-                                    <h1 className="headfont ">Payment</h1>
-                                </div>
-                            </div>
-                            <hr/>
-                        </Jumbotron>
-                        {   this.state.loading ? <Spinner color="primary"/> :
-                            <div className="container">
-                                <div className="row">
-                                    <div className="col"/>
-                                    <div className="col-sm-2">
-                                        <img src="./assets/images/correct.png" height="50px" width="50px" alt="Success"/>
-                                    </div>
-                                    <div className="col-sm-4 my-auto text-left d-none d-sm-block">
-                                        <p className="bodyfont text-5">Payment is sucessful!</p>
-                                    </div>
-                                    <div className="col-sm-4 my-4 d-block d-sm-none">
-                                        <p className="bodyfont text-5">Payment is sucessful!</p>
-                                    </div>
-                                    <div className="col"/>
-                                </div>
-                                <br/><br/><br/>
+                <CSSTransition in={true} appear={true} timeout={800} classNames="fade">
+                    <div className="container">
+                            <Jumbotron>
                                 <div className="row">
                                     <div className="col">
-                                    <NavLink to="/courses"><Button color="primary" className="bodyfont text-9">⠀⠀⠀Browse Courses⠀⠀⠀</Button></NavLink>
+                                        <h1 className="headfont ">Payment</h1>
                                     </div>
                                 </div>
-                            </div>
+                                <hr/>
+                            </Jumbotron>
+                            {   this.state.loading ? <Spinner color="primary"/> :
+                                <div className="container">
+                                    <div className="row">
+                                        <div className="col"/>
+                                        <div className="col-sm-2">
+                                            <img src="./assets/images/correct.png" height="50px" width="50px" alt="Success"/>
+                                        </div>
+                                        <div className="col-sm-4 my-auto text-left d-none d-sm-block">
+                                            <p className="bodyfont text-5">Payment is sucessful!</p>
+                                        </div>
+                                        <div className="col-sm-4 my-4 d-block d-sm-none">
+                                            <p className="bodyfont text-5">Payment is sucessful!</p>
+                                        </div>
+                                        <div className="col"/>
+                                    </div>
+                                    <br/><br/><br/>
+                                    <div className="row">
+                                        <div className="col">
+                                        <NavLink to="/courses"><Button color="primary" className="headfont text-9">⠀⠀⠀Browse Courses⠀⠀⠀</Button></NavLink>
+                                        </div>
+                                    </div>
+                                </div>
                             }
-                        <br/><br/><br/>
-                </div>       
+                            <br/><br/><br/>
+                    </div> 
+                </CSSTransition>      
             );
         }
         else {

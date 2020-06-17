@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Jumbotron } from 'reactstrap';
 import Professional from './Professional';
+import { CSSTransition } from 'react-transition-group';
 
 export default class Courses extends Component {
     
@@ -14,24 +15,26 @@ export default class Courses extends Component {
 
     render() {
         return (
-            <div>
-                <div className="container">
-                    <Jumbotron>
-                        <div className="row">
-                            <div className="col">
-                                <h1 className="headfont text-4">Courses</h1>
+            <CSSTransition in={true} appear={true} timeout={800} classNames="fade">
+                <div>
+                    <div className="container">
+                        <Jumbotron>
+                            <div className="row">
+                                <div className="col">
+                                    <h1 className="headfont text-4">Courses</h1>
+                                </div>
                             </div>
-                        </div>
-                        <hr/>   
-                    </Jumbotron>
+                            <hr/>   
+                        </Jumbotron>
+                    </div>
+                    <div className="">
+                    <br/>
+                    <Professional currentUserEmail={this.props.currentUserEmail}
+                    courseID={this.props.courseID}
+                    updateCourseID={this.props.updateCourseID}/>
+                    </div>
                 </div>
-                <div className="">
-                <br/>
-                <Professional currentUserEmail={this.props.currentUserEmail}
-                courseID={this.props.courseID}
-                updateCourseID={this.props.updateCourseID}/>
-                </div>
-            </div>
+            </CSSTransition>
         )
     }
 }

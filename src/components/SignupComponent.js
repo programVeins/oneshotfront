@@ -4,6 +4,7 @@ import { Button, Form, FormGroup, Label, Input, Jumbotron, FormFeedback,
 import { NavLink, Redirect } from 'react-router-dom';
 import axios from 'axios';
 import Breaks from './Breaks';
+import { CSSTransition } from 'react-transition-group';
 
 const backEndUrl = "https://oneshotback.herokuapp.com"
 
@@ -183,135 +184,139 @@ class Signup extends Component {
       const errors = this.validate(this.state.firstname, this.state.lastname,
       this.state.contactnum, this.state.email, this.state.password); 
       return (
-        <div>
-          <div className="container">
-            <Jumbotron>
-              <div className="row">
-                  <div className="col">
-                      <h1 className="headfont text-4">Sign Up</h1>
-                  </div>
-              </div>
-              <hr className="white-line"/>
-            </Jumbotron>
+        <CSSTransition in={true} appear={true} timeout={800} classNames="fade">
+          <div>
             <div className="container">
-              <div className="row">
-                <div className="col-md-6 blackbgshade">
-                  <br/><br/>
-                  <Form onSubmit={this.handleSubmit}>
-                  <FormGroup className="row">
-                      <div className="col ml-auto mr-auto text-left">
-                        <Label for="fromrefID"><h5 className="headfont white-text text-7">Referal Code (if any)</h5></Label>
-                        < Input type="text" name="fromrefID" id="fromrefID"
-                          placeholder="Referal Code" onChange={this.handleInputChange}/>
-                      </div>
-                    </FormGroup>
-                    <FormGroup className="row">
-                      <div className="col ml-auto mr-auto text-left">
-                        <Label for="firstname"><h5 className="headfont white-text text-7">First Name</h5></Label>
-                        < Input type="text" name="firstname" id="firstname"
-                          placeholder="First Name" value={this.state.firstname}
-                          valid={errors.firstname === ''}
-                          invalid={errors.firstname !== ''}
-                          onBlur={this.handleBlur('firstname')}
-                          onChange={this.handleInputChange}/>
-                          <FormFeedback>{errors.firstname}</FormFeedback>
-                      </div>
-                    </FormGroup>
-                    <FormGroup className="row">
-                      <div className="col ml-auto mr-auto text-left">
-                        <Label for="lastname"><h5 className="headfont white-text text-7">Last Name</h5></Label>
-                        < Input type="text" name="lastname" id="lastname"
-                          placeholder="Last Name" value={this.state.lastname}
-                          valid={errors.lastname === ''}
-                          invalid={errors.lastname !== ''}
-                          onBlur={this.handleBlur('lastname')}
-                          onChange={this.handleInputChange}/>
-                          <FormFeedback>{errors.lastname}</FormFeedback>
-                      </div>
-                    </FormGroup>
-                    <FormGroup className="row">
-                      <div className="col ml-auto mr-auto text-left">
-                        <Label for="email"><h5 className="headfont white-text text-7">Email</h5></Label>
-                        < Input type="email" name="email" id="email"
-                          placeholder="Email ID" value={this.state.email}
-                          valid={errors.email === ''}
-                          invalid={errors.email !== ''}
-                          onBlur={this.handleBlur('email')}
-                          onChange={this.handleInputChange}/>
-                          <FormFeedback>{errors.email}</FormFeedback>
-                      </div>
-                    </FormGroup>
-                    <FormGroup className="row">
-                      <div className="col ml-auto mr-auto text-left">
-                        <Label for="contactnum"><h5 className="headfont white-text text-7">Contact Number</h5></Label>
-                        < Input type="text" name="contactnum" id="contactnum"
-                          placeholder="Contact Number" value={this.state.contactnum}
-                          valid={errors.contactnum === ''}
-                          invalid={errors.contactnum !== ''}
-                          onBlur={this.handleBlur('contactnum')}
-                          onChange={this.handleInputChange}/>
-                          <FormFeedback>{errors.contactnum}</FormFeedback>
-                      </div>
-                    </FormGroup>
-                    <FormGroup className="row">
-                      <div className="col ml-auto mr-auto text-left">
-                        <Label for="password"><h5 className="headfont white-text text-7">Password</h5></Label>
-                        < Input type="password" name="password" id="password"
-                          placeholder="Password" value={this.state.password}
-                          valid={errors.password === ''}
-                          invalid={errors.password !== ''}
-                          onBlur={this.handleBlur('password')}
-                          onChange={this.handleInputChange}/>
-                          <FormFeedback>{errors.password}</FormFeedback>
-                      </div>
-                    </FormGroup>
-                    <div className="row mt-5">
-                      <div className="col"><p className="bodyfont white-text">Already a User? <NavLink to="/login" className="bodyfont">Log In</NavLink></p></div>
+              <Jumbotron>
+                <div className="row">
+                    <div className="col">
+                        <h1 className="headfont text-4">Sign Up</h1>
                     </div>
-                    <div className="row mt-auto mb-5">
-                      <div className="col"><Button color="dark" size="lg" className="bodyfont">Submit</Button></div>
-                    </div>
-                  </Form>
                 </div>
-                <div className="col-md-6 greybg">
-                    <br/><br/><br/>
-                    <img src="./assets/images/add.png" className="my-auto" alt="Add" height="100px" width="100px"/>
-                    <p className="bodyfont text-8 my-2">Join OneShot Affiliate as a member</p>
-                    <br/>
-                    <img src="./assets/images/team.png" className="my-auto" alt="Add" height="100px" width="100px"/>
-                    <p className="bodyfont text-8 my-2">Refer more people to join</p>
-                    <br/>
-                    <img src="./assets/images/party.png" className="my-auto" alt="Add" height="100px" width="100px"/>
-                    <p className="bodyfont text-8 my-2">Enjoy the money and perks you earn!</p>
-                    <br/>
+                <hr className="white-line"/>
+              </Jumbotron>
+              <div className="container">
+                <div className="row">
+                  <div className="col-md-6 blackbgshade">
+                    <br/><br/>
+                    <Form onSubmit={this.handleSubmit}>
+                    <FormGroup className="row">
+                        <div className="col ml-auto mr-auto text-left">
+                          <Label for="fromrefID"><h5 className="headfont white-text text-7">Referal Code (if any)</h5></Label>
+                          < Input type="text" name="fromrefID" id="fromrefID"
+                            placeholder="Referal Code" onChange={this.handleInputChange}/>
+                        </div>
+                      </FormGroup>
+                      <FormGroup className="row">
+                        <div className="col ml-auto mr-auto text-left">
+                          <Label for="firstname"><h5 className="headfont white-text text-7">First Name</h5></Label>
+                          < Input type="text" name="firstname" id="firstname"
+                            placeholder="First Name" value={this.state.firstname}
+                            valid={errors.firstname === ''}
+                            invalid={errors.firstname !== ''}
+                            onBlur={this.handleBlur('firstname')}
+                            onChange={this.handleInputChange}/>
+                            <FormFeedback>{errors.firstname}</FormFeedback>
+                        </div>
+                      </FormGroup>
+                      <FormGroup className="row">
+                        <div className="col ml-auto mr-auto text-left">
+                          <Label for="lastname"><h5 className="headfont white-text text-7">Last Name</h5></Label>
+                          < Input type="text" name="lastname" id="lastname"
+                            placeholder="Last Name" value={this.state.lastname}
+                            valid={errors.lastname === ''}
+                            invalid={errors.lastname !== ''}
+                            onBlur={this.handleBlur('lastname')}
+                            onChange={this.handleInputChange}/>
+                            <FormFeedback>{errors.lastname}</FormFeedback>
+                        </div>
+                      </FormGroup>
+                      <FormGroup className="row">
+                        <div className="col ml-auto mr-auto text-left">
+                          <Label for="email"><h5 className="headfont white-text text-7">Email</h5></Label>
+                          < Input type="email" name="email" id="email"
+                            placeholder="Email ID" value={this.state.email}
+                            valid={errors.email === ''}
+                            invalid={errors.email !== ''}
+                            onBlur={this.handleBlur('email')}
+                            onChange={this.handleInputChange}/>
+                            <FormFeedback>{errors.email}</FormFeedback>
+                        </div>
+                      </FormGroup>
+                      <FormGroup className="row">
+                        <div className="col ml-auto mr-auto text-left">
+                          <Label for="contactnum"><h5 className="headfont white-text text-7">Contact Number</h5></Label>
+                          < Input type="text" name="contactnum" id="contactnum"
+                            placeholder="Contact Number" value={this.state.contactnum}
+                            valid={errors.contactnum === ''}
+                            invalid={errors.contactnum !== ''}
+                            onBlur={this.handleBlur('contactnum')}
+                            onChange={this.handleInputChange}/>
+                            <FormFeedback>{errors.contactnum}</FormFeedback>
+                        </div>
+                      </FormGroup>
+                      <FormGroup className="row">
+                        <div className="col ml-auto mr-auto text-left">
+                          <Label for="password"><h5 className="headfont white-text text-7">Password</h5></Label>
+                          < Input type="password" name="password" id="password"
+                            placeholder="Password" value={this.state.password}
+                            valid={errors.password === ''}
+                            invalid={errors.password !== ''}
+                            onBlur={this.handleBlur('password')}
+                            onChange={this.handleInputChange}/>
+                            <FormFeedback>{errors.password}</FormFeedback>
+                        </div>
+                      </FormGroup>
+                      <div className="row mt-5">
+                        <div className="col"><p className="bodyfont white-text">Already a User? <NavLink to="/login" className="bodyfont">Log In</NavLink></p></div>
+                      </div>
+                      <div className="row mt-auto mb-5">
+                        <div className="col"><Button color="dark" size="lg" className="headfont">Submit</Button></div>
+                      </div>
+                    </Form>
+                  </div>
+                  <div className="col-md-6 greybg">
+                      <br/><br/><br/>
+                      <img src="./assets/images/add.png" className="my-auto" alt="Add" height="100px" width="100px"/>
+                      <p className="bodyfont text-8 my-2">Join OneShot Affiliate as a member</p>
+                      <br/>
+                      <img src="./assets/images/team.png" className="my-auto" alt="Add" height="100px" width="100px"/>
+                      <p className="bodyfont text-8 my-2">Refer more people to join</p>
+                      <br/>
+                      <img src="./assets/images/party.png" className="my-auto" alt="Add" height="100px" width="100px"/>
+                      <p className="bodyfont text-8 my-2">Enjoy the money and perks you earn!</p>
+                      <br/>
+                  </div>
+                </div>
+                <br/>
+                <div>
+                  <Modal isOpen={this.state.toggle} toggle={this.toggler}>
+                    <ModalHeader toggle={this.toggler}>Error</ModalHeader>
+                    <ModalBody>
+                      {this.state.modalmess}
+                    </ModalBody>
+                    <ModalFooter>
+                      <Button color="primary" onClick={this.toggler}>Back</Button>{' '}
+                    </ModalFooter>
+                  </Modal>
                 </div>
               </div>
               <br/>
-              <div>
-                <Modal isOpen={this.state.toggle} toggle={this.toggler}>
-                  <ModalHeader toggle={this.toggler}>Error</ModalHeader>
-                  <ModalBody>
-                    {this.state.modalmess}
-                  </ModalBody>
-                  <ModalFooter>
-                    <Button color="primary" onClick={this.toggler}>Back</Button>{' '}
-                  </ModalFooter>
-                </Modal>
-              </div>
+              <br/>
             </div>
-            <br/>
-            <br/>
+            <br/><br/>
           </div>
-          <br/><br/>
-        </div>
+        </CSSTransition>
       );
     }
     else {
-      return(<div>
-          <Breaks/>
-          <Spinner color="primary"/>
-          <Breaks/>
-      </div>);
+      return( 
+        <div>
+            <Breaks/>
+            <Spinner color="primary"/>
+            <Breaks/>
+        </div>
+      );
     }
   }
 }

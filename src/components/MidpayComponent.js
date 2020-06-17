@@ -4,6 +4,7 @@ import { Jumbotron, Form, FormGroup, Input, Label, Button, FormFeedback,
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import Breaks from './Breaks';
+import { CSSTransition } from 'react-transition-group';
 
 const backEndUrl = "https://oneshotback.herokuapp.com"
 
@@ -95,83 +96,85 @@ class MidPay extends Component {
         { 
             const errors = this.validate(this.state.paynum);
             return(
-                    <div className="container">
-                            <Jumbotron>
-                                <div className="row">
-                                    <div className="col">
-                                        <h1 className="headfont ">Choose mode of receiving payment</h1>
+                    <CSSTransition in={true} appear={true} timeout={800} classNames="fade">
+                        <div className="container">
+                                <Jumbotron>
+                                    <div className="row">
+                                        <div className="col">
+                                            <h1 className="headfont ">Choose mode of receiving payment</h1>
+                                        </div>
                                     </div>
-                                </div>
-                                <hr/>
-                            </Jumbotron>
-                            <Form onSubmit={this.handleSubmit}>
-                                <p className="bodyfont text-7"> How would you want Oneshot to pay you for referals?</p>
-                                <br/><br/>
-                                <div className="row">
-                                    <div className="col d-none d-md-block"/>
-                                    <div className="col-md-6">
-                                    <FormGroup>
-                                        <Label for="paynum">
-                                            <p className="bodyfont text-8">GPay/PhonePe/Paytm Phone number <b>OR</b> UPI ID <b>OR</b> Bank AC No.*</p>
-                                        </Label>
-                                        <Input type="text" name="paynum" id="paynum" placeholder="Enter here"
-                                        value={this.state.paynum}
-                                        valid={errors.paynum === ''}
-                                        invalid={errors.paynum !== ''}
-                                        onChange={this.handleInputChange}
-                                        onBlur={this.handleBlur('paynum')}/>
-                                        <FormFeedback>{errors.paynum}</FormFeedback>
-                                    </FormGroup>
+                                    <hr/>
+                                </Jumbotron>
+                                <Form onSubmit={this.handleSubmit}>
+                                    <p className="bodyfont text-7"> How would you want Oneshot to pay you for referals?</p>
+                                    <br/><br/>
+                                    <div className="row">
+                                        <div className="col d-none d-md-block"/>
+                                        <div className="col-md-6">
+                                        <FormGroup>
+                                            <Label for="paynum">
+                                                <p className="bodyfont text-8">GPay/PhonePe/Paytm Phone number <b>OR</b> UPI ID <b>OR</b> Bank AC No.*</p>
+                                            </Label>
+                                            <Input type="text" name="paynum" id="paynum" placeholder="Enter here"
+                                            value={this.state.paynum}
+                                            valid={errors.paynum === ''}
+                                            invalid={errors.paynum !== ''}
+                                            onChange={this.handleInputChange}
+                                            onBlur={this.handleBlur('paynum')}/>
+                                            <FormFeedback>{errors.paynum}</FormFeedback>
+                                        </FormGroup>
+                                        </div>
+                                        <div className="col d-none d-md-block"/>
                                     </div>
-                                    <div className="col d-none d-md-block"/>
-                                </div>
-                                <br/>
-                                <div className="row">
-                                    <div className="col d-none d-md-block"/>
-                                    <div className="col-md-6">
-                                    <FormGroup>
-                                        <Label for="bname">
-                                            <p className="bodyfont text-8">Bank Name and Branch (If you chose Bank) </p>
-                                        </Label>
-                                        <Input type="text" name="bname" id="bname" placeholder="Enter here"
-                                        onChange={this.handleInputChange}
-                                        onBlur={this.handleBlur('bname')}/>
-                                    </FormGroup>
+                                    <br/>
+                                    <div className="row">
+                                        <div className="col d-none d-md-block"/>
+                                        <div className="col-md-6">
+                                        <FormGroup>
+                                            <Label for="bname">
+                                                <p className="bodyfont text-8">Bank Name and Branch (If you chose Bank) </p>
+                                            </Label>
+                                            <Input type="text" name="bname" id="bname" placeholder="Enter here"
+                                            onChange={this.handleInputChange}
+                                            onBlur={this.handleBlur('bname')}/>
+                                        </FormGroup>
+                                        </div>
+                                        <div className="col d-none d-md-block"/>
                                     </div>
-                                    <div className="col d-none d-md-block"/>
-                                </div>
-                                <br/>
-                                <div className="row">
-                                    <div className="col d-none d-md-block"/>
-                                    <div className="col-md-6">
-                                    <FormGroup>
-                                        <Label for="ifsc">
-                                            <p className="bodyfont text-8">Bank IFSC (If you chose Bank) </p>
-                                        </Label>
-                                        <Input type="text" name="ifsc" id="ifsc" placeholder="Enter here"
-                                        onChange={this.handleInputChange}
-                                        onBlur={this.handleBlur('ifsc')}/>
-                                    </FormGroup>
+                                    <br/>
+                                    <div className="row">
+                                        <div className="col d-none d-md-block"/>
+                                        <div className="col-md-6">
+                                        <FormGroup>
+                                            <Label for="ifsc">
+                                                <p className="bodyfont text-8">Bank IFSC (If you chose Bank) </p>
+                                            </Label>
+                                            <Input type="text" name="ifsc" id="ifsc" placeholder="Enter here"
+                                            onChange={this.handleInputChange}
+                                            onBlur={this.handleBlur('ifsc')}/>
+                                        </FormGroup>
+                                        </div>
+                                        <div className="col d-none d-md-block"/>
                                     </div>
-                                    <div className="col d-none d-md-block"/>
-                                </div>
-                                <br/>
-                                <div className="row mt-auto mb-5">
-                                    <div className="col">
-                                        <Button color="dark" size="lg" className="bodyfont">Submit</Button>
+                                    <br/>
+                                    <div className="row mt-auto mb-5">
+                                        <div className="col">
+                                            <Button color="dark" size="lg" className="headfont">Submit</Button>
+                                        </div>
                                     </div>
-                                </div>
-                            </Form>
-                            <Modal isOpen={this.state.toggle} toggle={this.toggler}>
-                                <ModalHeader toggle={this.toggler}>Error</ModalHeader>
-                                <ModalBody>
-                                    Please fill all required fields
-                                </ModalBody>
-                                <ModalFooter>
-                                    <Button color="primary" onClick={this.toggler}>Back</Button>{' '}
-                                </ModalFooter>
-                            </Modal>
-                    </div>
+                                </Form>
+                                <Modal isOpen={this.state.toggle} toggle={this.toggler}>
+                                    <ModalHeader toggle={this.toggler}>Error</ModalHeader>
+                                    <ModalBody>
+                                        Please fill all required fields
+                                    </ModalBody>
+                                    <ModalFooter>
+                                        <Button color="primary" onClick={this.toggler}>Back</Button>{' '}
+                                    </ModalFooter>
+                                </Modal>
+                        </div>
+                    </CSSTransition>
                     
             );
         }

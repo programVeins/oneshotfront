@@ -4,7 +4,7 @@ const Team = ({member}) => {
   return (
       <div className="container">
         <div className="row">
-          <div className="col-md-3 mt-auto mb-auto">        
+          <div className="col-lg-3 mt-auto mb-auto">        
               <img src={member.img} alt={member.name} height="200px" width="200px"/>
           </div>
           <div className="col">
