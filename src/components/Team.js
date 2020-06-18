@@ -12,7 +12,7 @@ const Team = ({member}) => {
               <h6 className="headfont mt-3">{member.role}</h6>
               <br/>
               <br/> 
-              <p className="text-justify bodyfont">{member.description}</p>
+              <p className="text-justify bodyfont text-9">{member.description}</p>
           </div>
         </div>
       </div>

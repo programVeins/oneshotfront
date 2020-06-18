@@ -66,11 +66,15 @@ const Professional = (props) => {
                                           <div className="col-xl-9">
                                               <Card>
                                                   <CardBody>
-                                                      <h4 className="headfont text-6">
-                                                          {prof.course} - {prof.name}
-                                                      </h4>
+                                                        <h4 className="headfont text-5">
+                                                          <u>{prof.course}</u>
+                                                        </h4>
+                                                        <br/>
+                                                        <h4 className="headfont text-7">
+                                                            Trainer: {prof.name}
+                                                        </h4>
                                                       <br/>
-                                                      <CardText className="bodyfont text-justify text-10">
+                                                      <CardText className="bodyfont text-justify text-9">
                                                           {prof.description}
                                                       </CardText>
                                                       {loading? <Button color="primary"><Spinner size="sm" color="light"/></Button> : <Button onClick={() => handleViewCourse(prof.id)} color="primary" className="headfont text-9">View Course</Button>}
@@ -86,11 +90,15 @@ const Professional = (props) => {
                                       <div className="col mt-5">
                                           <Card>
                                               <CardBody>
-                                                  <h4 className="headfont text-6">
-                                                      {prof.course} - {prof.name}
-                                                  </h4>
+                                                    <h4 className="headfont text-5">
+                                                      <u>{prof.course}</u>
+                                                    </h4>
+                                                    <br/>
+                                                    <h4 className="headfont text-7">
+                                                        Trainer: {prof.name}
+                                                    </h4>
                                                   <br/>
-                                                  <CardText className="bodyfont text-justify text-10">
+                                                  <CardText className="bodyfont text-justify text-9">
                                                       {prof.description}
                                                   </CardText>
                                                   {loading? <Button color="primary"><Spinner size="sm" color="light"/></Button> : <Button onClick={() => handleViewCourse(prof.id)} color="primary" className="headfont text-9">View Course</Button>}
@@ -108,11 +116,15 @@ const Professional = (props) => {
                                           <div className="col-sm-9">
                                               <Card>
                                                   <CardBody>
-                                                      <h4 className="headfont text-6">
-                                                          {prof.course} - {prof.name}
-                                                      </h4>
+                                                        <h4 className="headfont text-5">
+                                                          <u>{prof.course}</u>
+                                                        </h4>
+                                                        <br/>
+                                                        <h4 className="headfont text-7">
+                                                            Trainer: {prof.name}
+                                                        </h4>
                                                       <br/>
-                                                      <CardText className="bodyfont text-justify text-10">
+                                                      <CardText className="bodyfont text-justify text-9">
                                                           {prof.description}
                                                       </CardText>
                                                       {loading? <Button color="primary"><Spinner size="sm" color="light"/></Button> : <Button onClick={() => handleViewCourse(prof.id)} color="primary" className="headfont text-9">View Course</Button>}
@@ -131,11 +143,15 @@ const Professional = (props) => {
                                       <div className="col mt-5">
                                           <Card>
                                               <CardBody>
-                                                  <h4 className="headfont text-6">
-                                                      {prof.course} - {prof.name}
-                                                  </h4>
+                                                    <h4 className="headfont text-5">
+                                                      <u>{prof.course}</u>
+                                                    </h4>
+                                                    <br/>
+                                                    <h4 className="headfont text-7">
+                                                        Trainer: {prof.name}
+                                                    </h4>
                                                   <br/>
-                                                  <CardText className="bodyfont text-justify text-10">
+                                                  <CardText className="bodyfont text-justify text-9">
                                                       {prof.description}
                                                   </CardText>
                                                   {loading? <Button color="primary"><Spinner size="sm" color="light"/></Button> : <Button onClick={() => handleViewCourse(prof.id)} color="primary" className="headfont text-9">View Course</Button>}

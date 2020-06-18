@@ -39,7 +39,7 @@ export default class AffProComponent extends Component {
                             return(
                                 <div className="col-sm-4 mt-auto">
                                     <img src={item.pic} alt={item.alt} height="100px" width="100px"></img>
-                                    <h4 className="bodyfont text-8 mt-4"><b>{item.txt}</b></h4>
+                                    <h4 className="bodyfont text-8 mt-4">{item.txt}</h4>
                                 </div>
                             );
                         })

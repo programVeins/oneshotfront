@@ -121,15 +121,15 @@ export class SingleCourseComponent extends Component {
                                 <p className="headfont text-7 text-left">Instagram handle: </p>
                             </div>
                             <div className="col">
-                                <p className="bodyfont text-9 text-left">{thisCourse.ig}</p>
+                                <p className="bodyfont text-9 text-left">@{thisCourse.instagram}</p>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-sm-3">
-                                <p className="headfont text-7 text-left">Contact number (for enquires): </p>
+                                <p className="headfont text-7 text-left">Whatsapp Number (for enquires): </p>
                             </div>
                             <div className="col">
-                                <p className="bodyfont text-9 text-left">{thisCourse.cnum}</p>
+                                <p className="bodyfont text-9 text-left">{thisCourse.phone}</p>
                             </div>
                         </div>
                         <br/><br/><br/>
