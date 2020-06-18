@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Jumbotron, Spinner } from 'reactstrap'
+import { Jumbotron, Spinner, Button, ButtonGroup } from 'reactstrap'
 import Breaks from './Breaks';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
@@ -16,9 +16,12 @@ export class SingleCourseComponent extends Component {
     
         this.state = {
              loading: false,
-             redirect: false
+             redirect: false,
+             partLink: '',
+             colorBtn: 0,
         }
-        this.checkPaid = this.checkPaid.bind(this)
+        this.checkPaid = this.checkPaid.bind(this);
+        this.changePart = this.changePart.bind(this);
     }
     
 
@@ -27,6 +30,10 @@ export class SingleCourseComponent extends Component {
         this.checkPaid();
     }
 
+    changePart(singleLink, btnNum) {
+        this.setState({partLink: singleLink});
+        this.setState({colorBtn: btnNum})
+    }
 
     checkPaid() {
         this.setState({loading: true});
@@ -75,7 +82,21 @@ export class SingleCourseComponent extends Component {
                         </Jumbotron>
                         <div className="row">
                             <div className="col">
-                                <VideoPlayer plink={thisCourse.link}/>
+                                <h3 className="headfont text-5">Parts</h3>
+                            </div>
+                        </div>
+                        <ButtonGroup>
+                            {thisCourse.singlevidlinks.map((eachlink, index) => {
+                                return(
+                                    <Button color={this.state.colorBtn === index ? "light" : "primary"}  onClick={() => this.changePart(eachlink,index)}>{index+1}</Button>
+                                );
+                            })}
+                        </ButtonGroup>
+                        <br/><br/>
+                        <div className="row">
+                            <div className="col">
+                                <VideoPlayer plink={this.state.partLink === '' ? thisCourse.link : ''}
+                                            vlink={this.state.partLink === '' ? '' : this.state.partLink}/>
                             </div>
                         </div>
                         <br/><br/>

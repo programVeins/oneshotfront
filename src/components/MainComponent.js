@@ -31,7 +31,7 @@ class Main extends Component {
         this.state = {
             isLoggedIn: cookies.get('isLoggedIn') || false,
             currentUserEmail: cookies.get('currentUserEmail') || '',
-            courseID: 0
+            courseID: cookies.get('courseID') || 0,
         };
         this.loginToggler = this.loginToggler.bind(this);
         this.logoutToggler = this.logoutToggler.bind(this);
@@ -40,6 +40,8 @@ class Main extends Component {
     }
 
     updateCourseID(cID) {
+        const { cookies } = this.props;
+        cookies.set('courseID', cID, { path: '/' });
         this.setState({courseID: cID});
     }
 
