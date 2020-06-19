@@ -9,7 +9,8 @@ export const professionals =  [
         link: "PL8ikld4ky22-VgP1n4RXbrolJc-1zMlWK",
         singlevidlinks : [],
         instagram: "nyayartha",
-        phone: "9731375285"
+        phone: "9731375285",
+        comingSoon: false
     },
     {
         id: 1,
@@ -21,7 +22,8 @@ export const professionals =  [
         link: "PL8ikld4ky22-VgP1n4RXbrolJc-1zMlWK",
         singlevidlinks : [],
         instagram: "nyayartha",
-        phone: "9611703099"
+        phone: "9611703099",
+        comingSoon: false
     },
     {
         id: 2,
@@ -34,7 +36,8 @@ export const professionals =  [
         singlevidlinks : ["_LRrYIjc42k","D6c0RQss4cY","3OfJmIgbLKw","1yRO4q0MnDI","TdTFcTkh18M",
                             "zcVWwd61KIs","wjpYHh_ivvE","kZVABGpDtRk","sw6qAVfWGPw","XStYVwyd4eo"],
         instagram: "veeresh11201",
-        phone: "9841403100"
+        phone: "9841403100",
+        comingSoon: false
     },
     {
         id: 3,
@@ -46,7 +49,8 @@ export const professionals =  [
         link: "PL8ikld4ky22-VgP1n4RXbrolJc-1zMlWK",
         singlevidlinks : [],
         instagram: "_brian_dcruz",
-        phone: "9730992937"
+        phone: "9730992937",
+        comingSoon: false
     },
     {
         id: 4,
@@ -58,7 +62,8 @@ export const professionals =  [
         link:"PLzyiOZFDSL-5FRdPM4KtDZfcBZl5s4kbp",
         singlevidlinks : [],
         instagram: "ehsaas_bynv",
-        phone: "8072140227"
+        phone: "8072140227",
+        comingSoon: false
     },
     {
         id: 5,
@@ -70,7 +75,8 @@ export const professionals =  [
         link:"PLzyiOZFDSL-6zJ5eF0wolCyZXw4n9bQVD",
         singlevidlinks : [],
         instagram: "akshay_taleda",
-        phone: "9551388383"
+        phone: "9551388383",
+        comingSoon: false
     },
     {
         id: 6,
@@ -82,7 +88,21 @@ export const professionals =  [
         link: "PL8ikld4ky22-VgP1n4RXbrolJc-1zMlWK",
         singlevidlinks : [],
         instagram: "",
-        phone: ""
-    }
+        phone: "",
+        comingSoon: true
+    },
+    {
+        id: 7,
+        cdes: "Learn the art of making money online, brought to you by Oneshot ourselves!",
+        name: "Oneshot Affiliate",
+        course: "Affiliate Marketing",
+        img: "/assets/images/_logo.png",
+        description: "The founders Darshan Nahar and Fazin Sudhir are here to teach you the art of earning money through affiliate marketing. They are here to convey the concepts of affiliate marketing and along with that providing tips to their customers teaching them how to earn money through their website oneshotaffiliate.com anytime anywhere. Hence helping you to take that OneShot to Learn Big and Earn big in life.",
+        link: "PL8ikld4ky22-VgP1n4RXbrolJc-1zMlWK",
+        singlevidlinks : [],
+        instagram: "oneshot_affiliate",
+        phone: "",
+        comingSoon: true
+    },
 
 ]

@@ -80,7 +80,7 @@ class Account extends Component {
                                 {this.state.hasPaid === 1 || this.state.loading === true ? <></> :
                                     <div>
                                         <Alert color="primary">
-                                        You have not completed payment. Click <NavLink to="/payment">here</NavLink> to complete payment.
+                                        You have not completed payment. Click <NavLink to="/midpay">here</NavLink> to complete payment.
                                         </Alert>
                                         <br/><br/>
                                     </div>    
@@ -159,7 +159,7 @@ class Account extends Component {
                                                 <h5 className="headfont">My referal code: </h5>
                                             </div>
                                             <div className="col text-left">
-                                                {this.state.loading ? <Spinner color="primary" size="sm"/> :<h5 className="bodyfont">{this.state.hasPaid ? this.state.torefID : <NavLink to="/payment"> Pay Now to view! </NavLink>}</h5>}
+                                                {this.state.loading ? <Spinner color="primary" size="sm"/> :<h5 className="bodyfont">{this.state.hasPaid ? this.state.torefID : <NavLink to="/midpay"> Pay Now to view! </NavLink>}</h5>}
                                             </div>
                                         </div>
                                     </Fade>

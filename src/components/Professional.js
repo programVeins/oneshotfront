@@ -21,31 +21,37 @@ const Professional = (props) => {
             currentUserEmail: props.currentUserEmail
         }; 
         console.log(CUE);
-        axios.post(backEndUrl + '/api/checkpaid', {CUE})
-        .then(res => {
-            if (res.data.checkpaid === "nouser") {
-                setModalmess("You have not logged in. To access courses, please log in");
-                toggle();
-                setLoading(false);
-            }
-            else if (res.data.checkpaid === "unpaid") {
-                setModalmess("You have not completed payment. Please pay to access courses");
-                toggle();
-                setLoading(false);
-            }
-            else if (res.data.checkpaid === "paid") {
-                setRedirect(true);
-                setLoading(false);
-                console.log("Be:Setting course ID to : " + courseID);
-                props.updateCourseID(courseID);
-                console.log("Af:Setting course ID to : " + courseID);
-            }
-        })
-        .catch(err => {
-            console.log(err.mess);
+        if (professionals[courseID].comingSoon === true) {
+            setModalmess("Coming Soon!!");
+            toggle();
             setLoading(false);
-        })
-        
+        }
+        else {
+            axios.post(backEndUrl + '/api/checkpaid', {CUE})
+            .then(res => {
+                if (res.data.checkpaid === "nouser") {
+                    setModalmess("You have not logged in. To access courses, please log in");
+                    toggle();
+                    setLoading(false);
+                }
+                else if (res.data.checkpaid === "unpaid") {
+                    setModalmess("You have not completed payment. Please pay to access courses");
+                    toggle();
+                    setLoading(false);
+                }
+                else if (res.data.checkpaid === "paid") {
+                    setRedirect(true);
+                    setLoading(false);
+                    console.log("Be:Setting course ID to : " + courseID);
+                    props.updateCourseID(courseID);
+                    console.log("Af:Setting course ID to : " + courseID);
+                }
+            })
+            .catch(err => {
+                console.log(err.mess);
+                setLoading(false);
+            })
+        }
     }
 
     if (redirect === true ) { return <Redirect to= "/course"/>; }

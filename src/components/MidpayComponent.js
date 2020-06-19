@@ -114,7 +114,7 @@ class MidPay extends Component {
                                         <div className="col-md-6">
                                         <FormGroup>
                                             <Label for="paynum">
-                                                <p className="bodyfont text-8">GPay/PhonePe/Paytm Phone number <b>OR</b> UPI ID <b>OR</b> Bank AC No.*</p>
+                                                <p className="bodyfont text-8">GPay/PhonePe/Paytm Phone number <b>OR</b> UPI ID <b>OR</b> Bank AC No.* <b>OR</b> PayPal ID (Especially for people outside India)</p>
                                             </Label>
                                             <Input type="text" name="paynum" id="paynum" placeholder="Enter here"
                                             value={this.state.paynum}
