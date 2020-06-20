@@ -24,7 +24,7 @@ function Footer(props){
             <div className="row">
                 <div className="col-sm-6 mt-auto">
                     
-                    <h3 className="white-text text-justify headfont text-5">Disclaimer</h3><p className="white-text text-justify bodyfont text-10">
+                    <h3 className="white-text text-justify headfont text-5">Disclaimer</h3><p className="white-text text-justify bodyfont text-smol">
                     Here at OneShot Affiliate which is a Education and profit earning platform, We put all our efforts into making sure that we accurately represent our products and services and their potential for income and results. Earning, Income and Results statements made by our firm and its affiliates are estimates of what we think you can possibly earn. There is no guarantee that you will make these levels of income and by joining OneShot affiliate you accept the risk that an affiliate marketing entails, thus the earnings and income statements may differ by individuals based on their efforts. As with any business your result may vary and will be based on your individual effort,business experience, expertise and level of desire. There are no guarantees concerning the level of success that you may experience. The testimonials and examples used are exceptional results, which do not apply to the average purchaser and are not intended to represent or guarantee that anyone will achieve the same or similar results. Each individual’s success depends on his or her experience, dedication, desire and motivation and the drive to reace new levels of success. There is no assurance that the examples of past earnings can be duplicated in the future. We cannot guarantee your future results and/or success. There are some unknown risks in business and on the Internet that we cannot foresee which can reduce results. We are not responsible for your actions. Any Resident individual earning more than Rs.20,000/- through commission or brokerage is liable to pay TDS @ 5% under the Section 194H of Income Tax Act 2018-19 on commission and brokerage. The use of our information, products and services should be based on your own due diligence and interest and you agree that our company is not liable for any success or failure of your business that is directly or indirectly related to the purchase and use of our information, products and services and the access to this website. We make every attempt to clearly state and show all proof. We do not send your email or any information shared by you on our website to any person, firm or company under any circumstances.</p>
                 </div>
                 <div className="col-sm-6">
@@ -49,7 +49,7 @@ function Footer(props){
                             <p className="white-text text-left bodyfont">
                             Email: oneshotaffiliate.com
                             <br/>
-                            Head Office : ONESHOT AFFILIATE - Chennai - Banglore - UAE 
+                            Head Office : ONESHOT AFFILIATE - Bangalore, Karnataka, India
                             </p>
                        </div>
                     </div>

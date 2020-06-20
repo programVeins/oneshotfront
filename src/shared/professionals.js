@@ -1,29 +1,31 @@
 export const professionals =  [
     {
         id: 0,
-        cdes: "Basic legal knowledge for everyone, because you never know when it comes to your rescue!",
-        name: "Sumukh",
-        course: "Legal Sciences",
-        img: "/assets/images/Professionals/1.png",
-        description: "Sumukh who is currently pursuing BBA LLB at Christ University Bangalore, and has been awarded the following: BEST MOOTER - 3rd National Anand College of Legal Studies Moot and Honourable Commendation - Harvard Model United Nations 2018",
-        link: "PLzyiOZFDSL-60DM5E8ri8MlncfWJ7cI01",
-        singlevidlinks : ["5Wb5HfFaGdo","9LBKOJRxKXw","-aLEjOwNIVc","tjYze9B2SFg"],
-        instagram: "nyayartha",
-        phone: "9731375285",
-        comingSoon: false
+        cdes: "Emotional intelligence course to keep yourself self-sufficent and happy, even during toxic times!",
+        name: "Akshay Taleda",
+        course: "Life Transformation",
+        img: "/assets/images/Professionals/6.png",
+        description: "Akshay has worked with several millennials and Gen-X helping them discover & Unleash their potential. He believes that an individual's life is the result of their interpretation of their experiences. Akshay's mission in life to transform the lives of millions and touch the lives of a billion people through his seminars&writing. His life's ultimate mission is to build systems that simplify lives. He looks to transform the current generation of people by destroying their limiting beliefs which will lead us onto better incoming future generations. He aims to change the narrative about intelligence and build an emotionally intelligent society that will transform the way world functions.",
+        link:"PLzyiOZFDSL-6zJ5eF0wolCyZXw4n9bQVD",
+        singlevidlinks : ["dKzyiTWwsfA","UCjZxZ5EgdA","WvFByCOwKPs"],
+        instagram: "akshay_taleda",
+        phone: "9551388383",
+        comingSoon: false,
+        partNames: ["1","2","3"]
     },
     {
         id: 1,
-        cdes: "Basic economical knowledge, to manage your finances in your day-to-day life to increase your earnings efficiently!",
-        name: "Satvik",
-        course: "Economics",
-        img: "/assets/images/Professionals/2.png",
-        description: "Satvik is a Financial analyst and has worked with IDBI Capital, Diligent Financial Services and virtual Internship with Citi & BCG. He has been the President of Toastmasters' Youth Leadership Program. Morever, He himself is a leadership coach & a teacher who is a National Level sports player and has participated in more than 25 fests accross Bangalore.",
-        link: "PLzyiOZFDSL-6BwrcfqmlW6JlJUu6GKxZb",
-        singlevidlinks : ["nZhV_2YmV-k","NOx2Ag_igVY","HGOXnf-Jypg","7wWXdszNiuE"],
-        instagram: "nyayartha",
-        phone: "9611703099",
-        comingSoon: false
+        cdes: "Sweat your body with fun and style! Watch exclusive zumba dance tutorials from Ehsaas!",
+        name: "Ehsaas",
+        course: "Dance Fitness",
+        img: "/assets/images/Professionals/5.png",
+        description: "EHSAAS - 'a feeling', that's what dance means to us \u2764 Now let's know a little bit about the founders of Ehsaas. Vishal, the one who's loved for his style and is known as a powerhouse because of the charismatic and energetic vibe that he creates when he's around. Nirali, the one who is appreciated for her elegant moves and graceful expressions, has started dancing since childhood. She's a bundle of joy and creativity. Past 2 years we've choreographed many sangeets and organized fun and creative events for our clients. According to us, Zumba is the best way to lose calories as you can do it while losing yourself to the beautiful rythm of music. So we are here with a set of fun zumba routines for 'everybody and every body'. Do follow us on Instagram @ehsaas_bynv and subscribe to our youtube channel (Ehsaas- Nirali & Vishal) for amazing dance routines.",
+        link:"PLzyiOZFDSL-5FRdPM4KtDZfcBZl5s4kbp",
+        singlevidlinks : ["e6cblNVKx8o","10XsTmhyH6Q","xvIxyt_-yxY"],
+        instagram: "ehsaas_bynv",
+        phone: "8072140227",
+        comingSoon: false,
+        partNames: ["Intro","1","2"]
     },
     {
         id: 2,
@@ -37,7 +39,8 @@ export const professionals =  [
                             "zcVWwd61KIs","wjpYHh_ivvE","kZVABGpDtRk","sw6qAVfWGPw","XStYVwyd4eo"],
         instagram: "veeresh11201",
         phone: "9841403100",
-        comingSoon: false
+        comingSoon: false,
+        partNames: ["1","2","3","4","5","6","7","8","9","10",]
     },
     {
         id: 3,
@@ -47,39 +50,45 @@ export const professionals =  [
         img: "/assets/images/Professionals/4.png",
         description: "Hi I'm Brian D'Cruz. I am an athlete, boxer and soccer player. My main events being long jump,100 &200m. I got into boxing when I was 11 years old and have been winning gold medals throughout my school and high school days. I was awarded the most sporting boxer award in 12th grade and the best boxer in 8th grade. My real passion is for soccer and  I'm currently playing for a local team called the Eridians in Pune",
         link: "PLzyiOZFDSL-55pi204ixUuLH4W3dVvqx1",
-        singlevidlinks : ["o63urXNGXOQ","2vYaJUnAc1U","k7UN9zDrMjE","T0T3Ytgn2sE","rQfeoLX9958","FWF9rbKpi8c","rRNB5agAa0I","EEviRVVwcAk","fyXe_BFI4ic","","","","","",],
+        singlevidlinks : ["o63urXNGXOQ","2vYaJUnAc1U","nrkbpuBNb8g","Qyv5oggft84",
+        "4ZMJ7JrRT5k","pYXfaN0-YXk","k7UN9zDrMjE","T0T3Ytgn2sE","rQfeoLX9958",
+        "FWF9rbKpi8c","rRNB5agAa0I","EEviRVVwcAk","fyXe_BFI4ic","6tyYAnVgRAI",],
         instagram: "_brian_dcruz",
         phone: "9730992937",
-        comingSoon: false
+        comingSoon: false,
+        partNames: ["Day 1","Day 2","Day 3","Day 4","Day 5","Day 6","Legs","Back","Biceps","Triceps",
+        "Abs","Oblique Muscles","Shoulder","Chest"]
+    },
+    {
+        id: 0,
+        cdes: "Basic legal knowledge for everyone, because you never know when it comes to your rescue!",
+        name: "Sumukh",
+        course: "Legal Sciences",
+        img: "/assets/images/Professionals/1.png",
+        description: "Sumukh who is currently pursuing BBA LLB at Christ University Bangalore, and has been awarded the following: BEST MOOTER - 3rd National Anand College of Legal Studies Moot and Honourable Commendation - Harvard Model United Nations 2018",
+        link: "PLzyiOZFDSL-60DM5E8ri8MlncfWJ7cI01",
+        singlevidlinks : ["5Wb5HfFaGdo","9LBKOJRxKXw","-aLEjOwNIVc","tjYze9B2SFg"],
+        instagram: "nyayartha",
+        phone: "9731375285",
+        comingSoon: false,
+        partNames: ["1","2","3","4"]
     },
     {
         id: 4,
-        cdes: "Sweat your body with fun and style! Watch exclusive zumba dance tutorials from Ehsaas!",
-        name: "Ehsaas",
-        course: "Zumba Dance",
-        img: "/assets/images/Professionals/5.png",
-        description: "EHSAAS - 'a feeling', that's what dance means to us \u2764 Now let's know a little bit about the founders of Ehsaas. Vishal, the one who's loved for his style and is known as a powerhouse because of the charismatic and energetic vibe that he creates when he's around. Nirali, the one who is appreciated for her elegant moves and graceful expressions, has started dancing since childhood. She's a bundle of joy and creativity. Past 2 years we've choreographed many sangeets and organized fun and creative events for our clients. According to us, Zumba is the best way to lose calories as you can do it while losing yourself to the beautiful rythm of music. So we are here with a set of fun zumba routines for 'everybody and every body'. Do follow us on Instagram @ehsaas_bynv and subscribe to our youtube channel (Ehsaas- Nirali & Vishal) for amazing dance routines.",
-        link:"PLzyiOZFDSL-5FRdPM4KtDZfcBZl5s4kbp",
-        singlevidlinks : ["e6cblNVKx8o","10XsTmhyH6Q","XdZbG2ZafjA"],
-        instagram: "ehsaas_bynv",
-        phone: "8072140227",
-        comingSoon: false
-    },
+        cdes: "Basic economical knowledge, to manage your finances in your day-to-day life to increase your earnings efficiently!",
+        name: "Satvik",
+        course: "Economics",
+        img: "/assets/images/Professionals/2.png",
+        description: "Satvik is a Financial analyst and has worked with IDBI Capital, Diligent Financial Services and virtual Internship with Citi & BCG. He has been the President of Toastmasters' Youth Leadership Program. Morever, He himself is a leadership coach & a teacher who is a National Level sports player and has participated in more than 25 fests accross Bangalore.",
+        link: "PLzyiOZFDSL-6BwrcfqmlW6JlJUu6GKxZb",
+        singlevidlinks : ["nZhV_2YmV-k","NOx2Ag_igVY","HGOXnf-Jypg","7wWXdszNiuE"],
+        instagram: "nyayartha",
+        phone: "9611703099",
+        comingSoon: false,
+        partNames: ["1","2","3","4"]
+    },    
     {
         id: 5,
-        cdes: "Emotional intelligence course to keep yourself self-sufficent and happy, even during toxic times!",
-        name: "Akshay Taleda",
-        course: "Life Transformation",
-        img: "/assets/images/Professionals/6.png",
-        description: "Akshay has worked with several millennials and Gen-X helping them discover & Unleash their potential. He believes that an individual's life is the result of their interpretation of their experiences. Akshay's mission in life to transform the lives of millions and touch the lives of a billion people through his seminars&writing. His life's ultimate mission is to build systems that simplify lives. He looks to transform the current generation of people by destroying their limiting beliefs which will lead us onto better incoming future generations. He aims to change the narrative about intelligence and build an emotionally intelligent society that will transform the way world functions.",
-        link:"PLzyiOZFDSL-6zJ5eF0wolCyZXw4n9bQVD",
-        singlevidlinks : ["dKzyiTWwsfA","UCjZxZ5EgdA","WvFByCOwKPs"],
-        instagram: "akshay_taleda",
-        phone: "9551388383",
-        comingSoon: false
-    },
-    {
-        id: 6,
         cdes: "Learn to be a masterchef, with our one and only cooking course!",
         name: "The Adventurous Palate",
         course: "Cooking",
@@ -89,7 +98,8 @@ export const professionals =  [
         singlevidlinks : [],
         instagram: "",
         phone: "",
-        comingSoon: true
+        comingSoon: true,
+        partNames: []
     },
     {
         id: 7,
@@ -102,7 +112,8 @@ export const professionals =  [
         singlevidlinks : [],
         instagram: "oneshot_affiliate",
         phone: "",
-        comingSoon: true
+        comingSoon: true,
+        partNames: []
     },
 
 ]

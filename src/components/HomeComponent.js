@@ -61,7 +61,7 @@ export default class Home extends Component {
                                 </Fade>
                                 <br/>
                                 <br/>
-                                <Fade in><div className="col"><NavLink to="/signup"><Button color="primary" size="lg" className="headfont text-7">⠀⠀⠀Start earning⠀⠀⠀</Button></NavLink></div></Fade>
+                                <Fade in><div className="col"><NavLink to="/signup"><Button color="primary" size="lg" className="headfont text-7">⠀⠀⠀Start Learning⠀⠀⠀</Button></NavLink></div></Fade>
                             </Stagger>
                     </Jumbotron>
                     <br/>
@@ -78,7 +78,7 @@ export default class Home extends Component {
                             </div>
                         </div>
                     </div>
-                    <br/>
+                    <HomeCoursesComponent/>
                     <div className="container">
                         <div className="row">
                             <div className="col mt-5">
@@ -94,7 +94,6 @@ export default class Home extends Component {
                         </div>
                         <br/><br/><br/><br/>
                     </div>
-                    <HomeCoursesComponent/>
                     <AffProComponent/>
                     <GainComponent/>
                 </div>

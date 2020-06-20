@@ -8,7 +8,7 @@ const row1 = [
         bod: "Learn to be a masterchef today!"
     },
     {
-        head: "Zumba Dance",
+        head: "Dance Fitness",
         bod: "Sweat your body with fun and style!"
     },
     {

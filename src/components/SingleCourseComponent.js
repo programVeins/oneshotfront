@@ -88,7 +88,8 @@ export class SingleCourseComponent extends Component {
                         <ButtonGroup>
                             {thisCourse.singlevidlinks.map((eachlink, index) => {
                                 return(
-                                    <Button color={this.state.colorBtn === index ? "light" : "primary"}  onClick={() => this.changePart(eachlink,index)}>{index+1}</Button>
+                                    <Button color={this.state.colorBtn === index ? "light" : "primary"}
+                                    onClick={() => this.changePart(eachlink,index)}>{thisCourse.partNames[index]}</Button>
                                 );
                             })}
                         </ButtonGroup>
