@@ -98,7 +98,7 @@ export default class Admin extends Component {
                             <p className="headfont text-9">Referals</p>
                         </div>
                         <div className="col">
-                            <p className="headfont text-9">Ref Code</p>
+                            <p className="headfont text-9">Date Paid</p>
                         </div>
                         <div className="col">
                             <p className="headfont text-9">Pay/UPI/AC No.</p>
@@ -131,7 +131,7 @@ export default class Admin extends Component {
                                 <p className="text-smol bodyfont text-center" key={index}>{user.numberOfReferals > 0 ? user.numberOfReferals : 0}</p>
                             </div>
                             <div className="col">
-                                <p className="text-smol bodyfont text-center" key={index}>{user.torefID}</p>
+                                <p className="text-smol bodyfont text-center" key={index}>{user.datePaid}</p>
                             </div>
                             <div className="col">
                                 <p className="text-smol bodyfont text-center" key={index}>{user.paynum}</p>

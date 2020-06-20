@@ -3,8 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
 
 x {
-  color: rgb(61, 127, 226);
-  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .App {

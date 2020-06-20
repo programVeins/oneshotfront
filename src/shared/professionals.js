@@ -6,8 +6,8 @@ export const professionals =  [
         course: "Legal Sciences",
         img: "/assets/images/Professionals/1.png",
         description: "Sumukh who is currently pursuing BBA LLB at Christ University Bangalore, and has been awarded the following: BEST MOOTER - 3rd National Anand College of Legal Studies Moot and Honourable Commendation - Harvard Model United Nations 2018",
-        link: "PL8ikld4ky22-VgP1n4RXbrolJc-1zMlWK",
-        singlevidlinks : [],
+        link: "PLzyiOZFDSL-60DM5E8ri8MlncfWJ7cI01",
+        singlevidlinks : ["5Wb5HfFaGdo","9LBKOJRxKXw","-aLEjOwNIVc","tjYze9B2SFg"],
         instagram: "nyayartha",
         phone: "9731375285",
         comingSoon: false
@@ -19,8 +19,8 @@ export const professionals =  [
         course: "Economics",
         img: "/assets/images/Professionals/2.png",
         description: "Satvik is a Financial analyst and has worked with IDBI Capital, Diligent Financial Services and virtual Internship with Citi & BCG. He has been the President of Toastmasters' Youth Leadership Program. Morever, He himself is a leadership coach & a teacher who is a National Level sports player and has participated in more than 25 fests accross Bangalore.",
-        link: "PL8ikld4ky22-VgP1n4RXbrolJc-1zMlWK",
-        singlevidlinks : [],
+        link: "PLzyiOZFDSL-6BwrcfqmlW6JlJUu6GKxZb",
+        singlevidlinks : ["nZhV_2YmV-k","NOx2Ag_igVY","HGOXnf-Jypg","7wWXdszNiuE"],
         instagram: "nyayartha",
         phone: "9611703099",
         comingSoon: false
@@ -60,7 +60,7 @@ export const professionals =  [
         img: "/assets/images/Professionals/5.png",
         description: "EHSAAS - 'a feeling', that's what dance means to us \u2764 Now let's know a little bit about the founders of Ehsaas. Vishal, the one who's loved for his style and is known as a powerhouse because of the charismatic and energetic vibe that he creates when he's around. Nirali, the one who is appreciated for her elegant moves and graceful expressions, has started dancing since childhood. She's a bundle of joy and creativity. Past 2 years we've choreographed many sangeets and organized fun and creative events for our clients. According to us, Zumba is the best way to lose calories as you can do it while losing yourself to the beautiful rythm of music. So we are here with a set of fun zumba routines for 'everybody and every body'. Do follow us on Instagram @ehsaas_bynv and subscribe to our youtube channel (Ehsaas- Nirali & Vishal) for amazing dance routines.",
         link:"PLzyiOZFDSL-5FRdPM4KtDZfcBZl5s4kbp",
-        singlevidlinks : [],
+        singlevidlinks : ["e6cblNVKx8o","10XsTmhyH6Q"],
         instagram: "ehsaas_bynv",
         phone: "8072140227",
         comingSoon: false
