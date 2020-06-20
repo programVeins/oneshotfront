@@ -1,6 +1,6 @@
 import React, { Component} from 'react';
 import { Button, Form, FormGroup, Label, Input, Jumbotron, FormFeedback,
-  Modal, ModalHeader, ModalBody, ModalFooter, Spinner } from 'reactstrap';
+  Modal, ModalHeader, ModalBody, ModalFooter, Spinner, Alert } from 'reactstrap';
 import { NavLink, Redirect } from 'react-router-dom';
 import axios from 'axios';
 import Breaks from './Breaks';
@@ -195,7 +195,14 @@ class Signup extends Component {
                 </div>
                 <hr className="white-line"/>
               </Jumbotron>
+
               <div className="container">
+                <div>
+                    <Alert color="primary">
+                    If you are an existing user, click <NavLink to="/login">here</NavLink> to log in!
+                    </Alert>
+                    <br/><br/>
+                </div>   
                 <div className="row">
                   <div className="col-md-6 blackbgshade">
                     <br/><br/>
