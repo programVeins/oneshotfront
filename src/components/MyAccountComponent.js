@@ -169,7 +169,22 @@ class Account extends Component {
                                                 <h5 className="headfont">My referal code: </h5>
                                             </div>
                                             <div className="col text-left">
-                                                {this.state.loading ? <Spinner color="primary" size="sm"/> :<h5 className="bodyfont">{this.state.hasPaid ? this.state.torefID : <NavLink to="/midpay"> Pay Now to view! </NavLink>}</h5>}
+                                                {this.state.loading ? 
+                                                <Spinner color="primary" size="sm"/> :
+                                                <h5 className="bodyfont">
+                                                    { 
+                                                        this.state.paynum === null && this.state.hasPaid === 0 ?
+                                                        <NavLink to="/payment"> Complete payment! </NavLink> :
+                                                        <></>  
+                                                    }
+                                                    { 
+                                                        this.state.paynum === null && this.state.hasPaid === 1 ?
+                                                        <NavLink to="/midpay"> Complete your profile! </NavLink> :
+                                                        <></>  
+                                                    }
+
+                                                </h5>
+                                                }
                                             </div>
                                         </div>
                                     </Fade>
