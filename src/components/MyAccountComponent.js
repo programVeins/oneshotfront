@@ -22,6 +22,7 @@ class Account extends Component {
             hasPaid: 0,
             numberOfReferals: 0,
             isAdmin: 0,
+            paynum: '',
         }
 
         this.fetchUserDeets = this.fetchUserDeets.bind(this)
@@ -42,7 +43,7 @@ class Account extends Component {
         const CUE = {
            currentUserEmail: this.props.currentUserEmail
         };
-
+        
         let res = await axios.post(backEndUrl + '/api/accountdeets', {CUE});
         console.log(res.data)
         await this.setState({firstname:res.data.firstname});
@@ -53,8 +54,9 @@ class Account extends Component {
         await this.setState({hasPaid:res.data.hasPaid});
         await this.setState({numberOfReferals:res.data.numberOfReferals});
         await this.setState({isAdmin:res.data.isAdmin});
+        await this.setState({paynum:res.data.paynum});
         await this.setState({loading:false});           
-        
+        console.log(this.state);
     }  
     
       
@@ -80,10 +82,18 @@ class Account extends Component {
                                 {this.state.hasPaid === 1 || this.state.loading === true ? <></> :
                                     <div>
                                         <Alert color="primary">
-                                        You have not completed payment. Click <NavLink to="/midpay">here</NavLink> to complete payment.
+                                        You have not completed payment. Click <NavLink to="/payment">here</NavLink> to complete payment.
                                         </Alert>
                                         <br/><br/>
                                     </div>    
+                                }
+                                { this.state.paynum !== null || this.state.loading === true || this.state.hasPaid === 0 ? <></> :
+                                    <div>
+                                        <Alert color="primary">
+                                            You have not chosen how you'd like to receive payment from oneshot. Click <NavLink to="/midpay">here</NavLink> to fill in your details.
+                                        </Alert>
+                                        <br/><br/>
+                                    </div>  
                                 }
                                 <Stagger in delay={50}>
                                     <Fade in>

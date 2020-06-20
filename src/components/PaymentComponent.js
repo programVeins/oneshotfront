@@ -27,7 +27,7 @@ class Payment extends Component {
                                 <p className="bodyfont text-7">Click the button below to pay with Razorpay Payment gateway. You are just one step away from joining oneshot! Join now!</p>
                             </div>
                             <br/><br/>
-                            <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_F0dMRGJ1QR5Irb/view" data-text="Join Oneshot!" data-color="#3983D8" data-size="large">
+                            <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_F4xYptPnRw7Nn0/view" data-text="Join Oneshot!" data-color="#3983D8" data-size="large">
                             <ScriptTag
                                 src="https://cdn.razorpay.com/static/embed_btn/bundle.js"
                                 id="razorpay-embed-btn-js"/>

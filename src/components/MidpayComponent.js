@@ -90,7 +90,7 @@ class MidPay extends Component {
     render() {
 
         if (this.state.redirect) {
-            return <Redirect to='/payment'/>;
+            return <Redirect to='/account'/>;
         }
         else if (this.state.loading !== true)
         { 
