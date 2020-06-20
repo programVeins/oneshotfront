@@ -73,7 +73,7 @@ class PaymentSucess extends Component {
                                     <br/><br/><br/>
                                     <div className="row">
                                         <div className="col">
-                                        <NavLink to="/courses"><Button color="primary" className="headfont text-9">⠀⠀⠀Browse Courses⠀⠀⠀</Button></NavLink>
+                                        <NavLink to="/midpay"><Button color="primary" className="headfont text-9">⠀⠀⠀Next⠀⠀⠀</Button></NavLink>
                                         </div>
                                     </div>
                                 </div>
