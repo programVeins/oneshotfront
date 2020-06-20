@@ -182,6 +182,11 @@ class Account extends Component {
                                                         <NavLink to="/midpay"> Complete your profile! </NavLink> :
                                                         <></>  
                                                     }
+                                                    { 
+                                                        this.state.paynum !== null && this.state.hasPaid === 1 ? 
+                                                        this.state.torefID : <></>
+                                                    }
+                                                    
 
                                                 </h5>
                                                 }
