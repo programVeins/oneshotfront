@@ -8,7 +8,7 @@ const Team = ({member}) => {
               <img src={member.img} alt={member.name} height="200px" width="200px"/>
           </div>
           <div className="col">
-              <h4 className="headfont"><u>{member.name}</u></h4>           
+              <h4 className="headfont mt-3"><u>{member.name}</u></h4>           
               <h6 className="headfont mt-3">{member.role}</h6>
               <br/>
               <br/> 
