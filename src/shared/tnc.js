@@ -50,6 +50,10 @@ const TNC = () => {
         <br/>
         <p>By registering to Oneshotaffiliate.com, you will be provided with a unique referral code along with the license to use the software and courses provided to you by Oneshotaffiliate.com. This license of use is only applicable within the permitted terms and conditions and all other applicable laws and regulations.</p>
         <br/>
+        <h6>10. TAX</h6>
+        <br/>
+        <p>Any customer based in India earning more than Rs.20,000/- through commission or brokerage is liable to pay TDS @ 5% under the Section 194H of Income Tax Act 2018-19 on commission and brokerage.</p>
+        <br/>
         </div>
     );
 } 

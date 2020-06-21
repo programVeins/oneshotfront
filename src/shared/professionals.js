@@ -60,7 +60,7 @@ export const professionals =  [
         "Abs","Oblique Muscles","Shoulder","Chest"]
     },
     {
-        id: 0,
+        id: 4,
         cdes: "Basic legal knowledge for everyone, because you never know when it comes to your rescue!",
         name: "Sumukh",
         course: "Legal Sciences",
@@ -74,7 +74,7 @@ export const professionals =  [
         partNames: ["1","2","3","4"]
     },
     {
-        id: 4,
+        id: 5,
         cdes: "Basic economical knowledge, to manage your finances in your day-to-day life to increase your earnings efficiently!",
         name: "Satvik",
         course: "Economics",
@@ -88,7 +88,7 @@ export const professionals =  [
         partNames: ["1","2","3","4"]
     },    
     {
-        id: 5,
+        id: 6,
         cdes: "Learn to be a masterchef, with our one and only cooking course!",
         name: "The Adventurous Palate",
         course: "Cooking",

@@ -12,6 +12,7 @@ const Professional = (props) => {
     const [redirect, setRedirect] = useState(false);
     const [modal, setModal] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [modalheader, setModalheader] = useState('Error');
     const [modalmess, setModalmess] = useState('');
     const toggle = () => setModal(!modal);
 
@@ -22,6 +23,7 @@ const Professional = (props) => {
         }; 
         console.log(CUE);
         if (professionals[courseID].comingSoon === true) {
+            setModalheader('');
             setModalmess("Coming Soon!!");
             toggle();
             setLoading(false);
@@ -173,7 +175,7 @@ const Professional = (props) => {
                   </Stagger>
               </ul>
               <Modal isOpen={modal} toggle={toggle}>
-                      <ModalHeader toggle={toggle}>Error</ModalHeader>
+                      <ModalHeader toggle={toggle}>{modalheader}</ModalHeader>
                       <ModalBody>
                           {modalmess}
                       </ModalBody>
