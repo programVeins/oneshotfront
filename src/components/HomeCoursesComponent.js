@@ -27,7 +27,7 @@ const row2 = [
         bod: "Acquire basic Economical Knowledge!"
     },
     {
-        head: "Youtubing",
+        head: "Youtuber Course",
         bod: "How to become a sucessful youtuber!"
     },
     {

@@ -33,7 +33,7 @@ export const professionals =  [
         id: 2,
         cdes: "Watch as our instructor Veeresh guides you on your way to become a Pro Youtuber!",
         name: "Veeresh",
-        course: "Youtubing",
+        course: "Youtuber Course",
         img: "/assets/images/Professionals/3.png",
         description: "Veeresh is a college student and a school topper. He is a YouTuber also known as HolyFrenchFry. He excels in Public relations and has won events in college for the same. Also participating in various extracurricular activities like Football and Tennis and activities like Mime and Theatre for acting related. He has completed courses and is certified in Sales, Digital Marketing and Negotiation online. He recently surpassed a thousand Subscribers and fourty thousand views on YouTube.",
         link:"PLzyiOZFDSL-6hu2DyFJ3xosku2sDN4MV7",
