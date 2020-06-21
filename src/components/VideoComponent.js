@@ -17,7 +17,7 @@ const VideoPlayer = (props) => {
       src={SRC}
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       frameBorder="0"
-      allowfullscreen></iframe>
+      allowFullScreen></iframe>
     </div>
   );
 }
