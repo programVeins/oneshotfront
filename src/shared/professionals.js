@@ -23,7 +23,7 @@ export const professionals =  [
         description: "EHSAAS - 'a feeling', that's what dance means to us \u2764 Now let's know a little bit about the founders of Ehsaas. Vishal, the one who's loved for his style and is known as a powerhouse because of the charismatic and energetic vibe that he creates when he's around. Nirali, the one who is appreciated for her elegant moves and graceful expressions, has started dancing since childhood. She's a bundle of joy and creativity. Past 2 years we've choreographed many sangeets and organized fun and creative events for our clients. According to us, Zumba is the best way to lose calories as you can do it while losing yourself to the beautiful rythm of music. So we are here with a set of fun zumba routines for 'everybody and every body'. Do follow us on Instagram @ehsaas_bynv and subscribe to our youtube channel (Ehsaas- Nirali & Vishal) for amazing dance routines.",
         link:"PLzyiOZFDSL-5FRdPM4KtDZfcBZl5s4kbp",
         singlevidlinks : ["e6cblNVKx8o","10XsTmhyH6Q","xvIxyt_-yxY","Np7UHHSU8hA",
-        "","u4DNkaAG-TU","2PxK24Swvjk","5ckdv8egyEM","9mI4MB9nNdo","E4lYRCkLRyg","uCyibl07MR4"],
+        "pf_vrm7QlDY","u4DNkaAG-TU","2PxK24Swvjk","5ckdv8egyEM","9mI4MB9nNdo","E4lYRCkLRyg","uCyibl07MR4"],
         instagram: "ehsaas_bynv",
         phone: "8072140227",
         comingSoon: false,
