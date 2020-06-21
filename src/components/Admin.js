@@ -16,8 +16,10 @@ export default class Admin extends Component {
             usersArr: [],
             redirect: false,
             modalmess: '',
+            sales: 0
         }
         this.fetchAdmin = this.fetchAdmin.bind(this);
+        this.totalPaid = this.totalPaid.bind(this);
     }
 
     async fetchAdmin() {
@@ -26,6 +28,18 @@ export default class Admin extends Component {
         await console.log(this.state);
         await this.setState({loading: false}); 
         
+    }
+
+    totalPaid() {
+        var paidCount = 0;
+        var free = 15; //KEEP CHANGING WHEN FREE USERS++!!
+        for (let i = 0; i < this.state.usersArr.length; i++) {
+            if (this.state.usersArr[i].hasPaid === 1) {
+                paidCount++;
+            }
+        }
+        var totalSales = paidCount - free;
+        this.setState({sales: totalSales});
     }
 
     async checkAdmin() {
@@ -40,6 +54,7 @@ export default class Admin extends Component {
                 await this.setState({redirect: false});
                 await console.log(this.state.redirect);
                 await console.log(res.data.isAdmin);
+                await this.totalPaid();
             }
             else {
                 this.setState({redirect: true});
@@ -57,7 +72,6 @@ export default class Admin extends Component {
     }
 
     render() {
-
         if (this.state.redirect === true) {
             return <Redirect to='/home'/>
         }
@@ -78,6 +92,9 @@ export default class Admin extends Component {
                 <div className="container-fluid">
                     <br/><br/>
                     <h3 className="headfont text-4">Database</h3>
+                    <br/><br/>
+                    <h3 className="headfont text-4 text-left"><u>Total Sales:</u></h3>
+                        <p className="bodyfont text-5 text-left">{this.state.sales}</p>
                     <br/><br/>
                     <h3 className="headfont text-4 text-left"><u>Users:</u></h3>
                     <br/><br/>
