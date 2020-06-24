@@ -32,7 +32,7 @@ export default class Admin extends Component {
 
     totalPaid() {
         var paidCount = 0;
-        var free = 17; //KEEP CHANGING WHEN FREE USERS++!!
+        var free = 19; //KEEP CHANGING WHEN FREE USERS++!!
         for (let i = 0; i < this.state.usersArr.length; i++) {
             if (this.state.usersArr[i].hasPaid === 1) {
                 paidCount++;
