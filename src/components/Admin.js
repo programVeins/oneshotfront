@@ -93,7 +93,7 @@ export default class Admin extends Component {
                     <br/><br/>
                     <h3 className="headfont text-4">Database</h3>
                     <br/><br/>
-                    <h3 className="headfont text-4 text-left"><u>Total Sales:</u></h3>
+                    <h3 className="headfont text-4 text-left"><u>Sales of the day:</u></h3>
                         <p className="bodyfont text-5 text-left">{this.state.sales}</p>
                     <br/><br/>
                     <h3 className="headfont text-4 text-left"><u>Users:</u></h3>
