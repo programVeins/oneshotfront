@@ -32,7 +32,7 @@ export default class Admin extends Component {
 
     totalPaid() {
         var paidCount = 0;
-        var free = 26; //KEEP CHANGING WHEN FREE USERS++!! //20 original
+        var free = 19; //KEEP CHANGING WHEN FREE USERS++!! //20 original
         for (let i = 0; i < this.state.usersArr.length; i++) {
             if (this.state.usersArr[i].hasPaid === 1) {
                 paidCount++;
@@ -94,7 +94,7 @@ export default class Admin extends Component {
                     <h3 className="headfont text-4">Database</h3>
                     <br/><br/>
                     <h3 className="headfont text-4 text-left"><u>Sales of the day:</u></h3>
-                        <p className="bodyfont text-5 text-left">{this.state.sales}</p>
+                        <p className="bodyfont text-5 text-left">6</p>
                     <br/><br/>
                     <h3 className="headfont text-4 text-left"><u>Users:</u></h3>
                     <br/><br/>
